@@ -5,6 +5,11 @@ header{
 nav{
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left:0;
+  padding: 1rem;
 }
 
 ul li a{
@@ -14,6 +19,15 @@ ul li a{
 
 .header__menu-logo{
   display: flex;
+  list-style: none;
+}
+
+.header__logo{
+color: rgb(22, 19, 118);
+}
+
+.logo__number4{
+  color: red;
 }
 
 .header__menu{
