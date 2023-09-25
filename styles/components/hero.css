@@ -1,0 +1,29 @@
+.hero{
+  padding: .5rem;
+
+}
+
+.hero__timbs-banner {
+  width: 85%;
+  background-position: center;
+  margin: auto;
+}
+
+
+/* xs */
+/* @media (max-width: 475px) {} */
+
+/* sm */
+/* @media (max-width: 640px) {} */
+
+/* md */
+/* @media (max-width: 768px) {} */
+
+/* Lg */
+/* @media (max-width: 1024px) {} */
+
+/* xL */
+/* @media (max-width: 1288px) {} */
+
+/* 2xL */
+/* @media (max-width: 1536px) {}   */

@@ -1,0 +1,51 @@
+header{
+  padding: .5rem
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li a{
+  text-decoration: none;
+  list-style: none;
+}
+
+.header__menu-logo{
+  display: flex;
+}
+
+.header__menu{
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.header__menu-cart{
+  display: flex;
+  list-style: none;
+
+}
+
+
+
+
+
+/* xs */
+/* @media (max-width: 475px) {} */
+
+/* sm */
+/* @media (max-width: 640px) {} */
+
+/* md */
+/* @media (max-width: 768px) {} */
+
+/* Lg */
+/* @media (max-width: 1024px) {} */
+
+/* xL */
+/* @media (max-width: 1288px) {} */
+
+/* 2xL */
+/* @media (max-width: 1536px) {}   */
