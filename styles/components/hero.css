@@ -3,13 +3,76 @@
   margin-left:  1rem;
 }
 
-.hero__timbs-banner {
-  width: 100%;
-  background-position: center;
-  margin: auto;
-  margin-top: 2rem ;
-  margin-bottom: 3rem;
+.main-scroll-div{
+  position: relative;
+  max-width: 48rem;
+  max-height: 24rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
+
+.cover{
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.scroll-images{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: auto;
+  position: relative;
+  scroll-behavior: smooth;
+  aspect-ratio: 16 / 9;
+  scroll-snap-type: x mandatory;
+}
+
+.child{
+  max-width: 48rem;
+  height: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.scroll-images::-webkit-scrollbar{
+  display: none;
+}
+
+.child-img{
+  flex: 1 0 100%;
+  object-fit: contain;
+}
+
+.fa-chevron-left,
+.fa-chevron-right{
+  cursor: pointer;
+  position: relative;
+  width: 50%;
+  margin: auto;
+  z-index: 20;
+}
+
+.hero__nav-button {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  }
+
+.timbs-img{
+  width: 100%;
+  height: 100%;
+}
+
 
 .hero__new-release-container{
   position: relative;

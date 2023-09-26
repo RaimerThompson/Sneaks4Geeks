@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/components/hero.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
+  
   <title>Sneaks 4 Geeks</title>
 </head>
 <body>
@@ -42,9 +43,42 @@
   <main>
 <!-- Hero Begins-->   
   <section class="hero section container">
-    <div class="hero__scroll-section">
-      <img class="hero__timbs-banner" src="images/Timberland-50th-2400x1157-04.jpg" alt="">
+
+    <div class="hero__scroll-container main-scroll-div">
+         
+      <div class="hero__scroll-banner cover">
+       <div class="hero__scroll-div scroll-images">
+      
+        <div class="mySlides">
+          <img class="child-img" src="images/New-balance-nyc-banner.webp" alt="">
+        </div>
+        <div class="mySlides">
+          <img class="child-img" src="images/nike-dunks-nyc-banner.webp" alt="">
+        </div>
+        <div class="mySlides">
+          <img class="child-img" src="images/Asics add image.webp" alt="">
+        </div>
+        <div class="mySlides">
+          <img class="child-img" src="images/Nike-in-the-woods-jordan1s.jpg" alt="">
+        </div>
+        <div class="mySlides">
+          <img class="child-img" src="images/Nike-wild-banner.webp" alt="">
+        </div>
+      </div>
     </div>
+   
+   </div>
+   <div class="hero__nav-button">
+    <div id="backBtn" onclick="plusSlides(-1)">
+    <i class="fa-solid fa-chevron-left"></i>
+  </div> 
+    <div id="nextBtn" onclick="plusSlides(1)">
+      <i class="fa-solid fa-chevron-right"></i>
+    </div> 
+   </div>
+   
+
+
     <div class="hero__new-release-container">
       <h2 class="hero__subtitle">NEW RELEASES</h2>
       <div class="hero__button-wrapper">
@@ -59,7 +93,9 @@
 
   </main>
   <footer></footer>
-
-
 </body>
+<script src="main.js"></script>
+<script>
+
+</script>
 </html>
