@@ -1,14 +1,49 @@
 .hero{
   padding: .5rem;
-
+  margin-left:  1rem;
 }
 
 .hero__timbs-banner {
-  width: 85%;
+  width: 100%;
   background-position: center;
+  margin: auto;
+  margin-top: 2rem ;
+  margin-bottom: 3rem;
+}
+
+.hero__new-release-container{
+  position: relative;
+  width: 50%;
   margin: auto;
 }
 
+.hero__subtitle{
+  text-align: center;
+  font-weight: 300;
+  font-size: var(--size-3xl);
+  letter-spacing: 6px;
+}
+
+.hero__button-wrapper{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero__button{
+  background: black;
+  color: white;
+  padding: 10px 30px;
+  border: .5px solid white;
+  font-weight: 300;
+}
+
+.hero__button:hover{
+  background: inherit;
+  color: black;
+  border: .5px solid black;
+  transition: .5s;
+}
 
 /* xs */
 /* @media (max-width: 475px) {} */
