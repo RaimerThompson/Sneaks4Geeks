@@ -45,6 +45,12 @@ color: rgb(22, 22, 122);
   font-weight: 300;
 }
 
+.header__link a:hover{
+  color: red;
+  font-weight: 500;
+  transition: .15s;
+}
+
 .header__menu-right{
   display: flex;
   list-style: none;

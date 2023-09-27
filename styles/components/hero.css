@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -58,7 +58,19 @@
   position: relative;
   width: 50%;
   margin: auto;
-  z-index: 20;
+  z-index: 2;
+  opacity: .4;
+  color: black;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover{
+opacity: .7;
+}
+
+.fa-chevron-left:active,
+.fa-chevron-right:active{
+  opacity: 1;
 }
 
 .hero__nav-button {
@@ -94,7 +106,7 @@
 }
 
 .hero__button{
-  background: black;
+  background: rgb(50, 50, 50);
   color: white;
   padding: 10px 30px;
   border: .5px solid white;
@@ -107,6 +119,31 @@
   border: .5px solid black;
   transition: .5s;
 }
+
+.hero__sneak-wrapper{
+  border: 2px solid red;
+  display: flex;
+  gap: 2px;
+  width: 1300px;
+  margin: auto;
+  position: relative;
+  overflow-x: scroll;
+}
+
+.hero__sneak-wrapper div {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.hero__sneak-wrapper div img{
+  width: 100%;
+}
+
+
 
 /* xs */
 /* @media (max-width: 475px) {} */
