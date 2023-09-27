@@ -5,7 +5,8 @@
 
 .main-scroll-div{
   position: relative;
-  max-width: 48rem;
+  max-width: 100%;
+  width: 100%;
   max-height: 24rem;
   display: flex;
   align-items: center;
@@ -75,8 +76,10 @@ opacity: .7;
 
 .hero__nav-button {
   display: flex;
+  position: relative;
   justify-content: center;
   gap: 2rem;
+
   margin-bottom: 3rem;
   }
 
@@ -88,24 +91,20 @@ opacity: .7;
 
 .hero__new-release-container{
   position: relative;
-  width: 50%;
-  margin: auto;
 }
 
 .hero__subtitle{
-  text-align: center;
   font-weight: 300;
   font-size: var(--size-3xl);
   letter-spacing: 6px;
 }
 
 .hero__button-wrapper{
-  text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-.hero__button{
+.hero__button, .btn{
   background: rgb(50, 50, 50);
   color: white;
   padding: 10px 30px;
@@ -124,7 +123,7 @@ opacity: .7;
   border: 2px solid red;
   display: flex;
   gap: 2px;
-  width: 1300px;
+  width: 1600px;
   margin: auto;
   position: relative;
   overflow-x: scroll;
