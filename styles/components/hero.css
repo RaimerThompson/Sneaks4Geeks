@@ -119,28 +119,46 @@ opacity: .7;
   transition: .5s;
 }
 
-.hero__sneak-wrapper{
-  border: 2px solid red;
-  display: flex;
-  gap: 2px;
-  width: 1600px;
-  margin: auto;
+#product {
   position: relative;
-  overflow-x: scroll;
-}
-
-.hero__sneak-wrapper div {
-  border: 1px solid gray;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85%;
-  margin: auto;
+  flex-direction: column;
 }
 
-.hero__sneak-wrapper div img{
-  width: 100%;
+.product__container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
+
+#product .pro1{
+  width: 15%;
+  min-width: 200px;
+  position: relative;
+}
+
+.shoe__name{
+  position: absolute;
+  bottom: 5px;
+  left: 16px;
+  font-size: var(--size-sm);
+}
+
+.shoe__name span{
+  color: rgb(150, 150, 150);
+  font-size: var(--size-xs);
+}
+
+.shoe__name p{
+  color: rgb(22, 22, 122, .7);
+}
+
+.pro1 img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+
 
 
 
