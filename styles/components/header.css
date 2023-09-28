@@ -30,7 +30,7 @@ color: rgb(22, 22, 122);
 }
 
 .logo__number4{
-  color: red;
+  color: rgb(255, 135, 55);
 }
 
 .header__menu{
@@ -45,8 +45,9 @@ color: rgb(22, 22, 122);
   font-weight: 300;
 }
 
-.header__link a:hover{
-  color: red;
+.header__link a:hover,
+.header__link a.active{
+  color: rgb(255, 135, 55);
   font-weight: 500;
   transition: .15s;
 }

@@ -7,7 +7,7 @@
   position: relative;
   max-width: 100%;
   width: 100%;
-  max-height: 24rem;
+  min-width: 24rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,18 +79,15 @@ opacity: .7;
   position: relative;
   justify-content: center;
   gap: 2rem;
-
   margin-bottom: 3rem;
   }
 
-.timbs-img{
-  width: 100%;
-  height: 100%;
-}
-
-
 .hero__new-release-container{
   position: relative;
+}
+
+.hero__exclusive-container{
+  margin-top: 5rem;
 }
 
 .hero__subtitle{
@@ -100,8 +97,8 @@ opacity: .7;
 }
 
 .hero__button-wrapper{
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero__button, .btn{
@@ -115,7 +112,7 @@ opacity: .7;
 .hero__button:hover{
   background: inherit;
   color: black;
-  border: .5px solid black;
+  border: .5px solid rgb(255, 135, 55);
   transition: .5s;
 }
 
@@ -137,6 +134,7 @@ opacity: .7;
   width: 15%;
   min-width: 200px;
   position: relative;
+  
 }
 
 .shoe__name{
@@ -152,7 +150,7 @@ opacity: .7;
 }
 
 .shoe__name p{
-  color: rgb(22, 22, 122, .7);
+  color: rgb(50, 50, 50)
 }
 
 .pro1 img{
@@ -160,7 +158,27 @@ opacity: .7;
   border-radius: 10px;
 }
 
+.cart{
+  color: rgb(22, 22, 122);
+  position: absolute;
+  bottom: 150px;
+  left: 150px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  text-align: center;
+  transition: .3s ease;
+  cursor: pointer;
+}
 
+.cart:hover{
+  opacity: .7;
+}
+
+.cart:active{
+  transform: scale(1.1);
+  opacity: 1;
+}
 
 
 

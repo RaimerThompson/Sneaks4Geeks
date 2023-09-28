@@ -13,21 +13,36 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
   min-width: 580px;
   height: 50vh;
-  background-image: url("images/nike-ad-banner.jpg");
   background-size: cover;
   background-position: center;
-  border: 1px dotted red;
+  padding: 2rem;
+  filter:grayscale(50%) ;
+}
+
+.banner1{
+  background-image: url("/images/Nike-wild-banner.webp");
+}
+
+.banner:hover{
+  filter: grayscale(0%);
 }
 
 .banner2{
-  background-color: aquamarine;
+  background-image: url(/images/Clarks-Hero-Banner.webp);
 }
 
+.banner__btn {
+  background: transparent;
+  color: black;
+  border: .5px solid black;
+}
 
+.banner__btn:hover{
+  border-color: white;
+}
 
 
 /* xs */
