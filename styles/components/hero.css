@@ -134,19 +134,21 @@ opacity: .7;
   width: 15%;
   min-width: 200px;
   position: relative;
-  
+ 
 }
 
 .shoe__name{
-  position: absolute;
-  bottom: 5px;
+  position: relative;
+  bottom: 40px;
   left: 16px;
   font-size: var(--size-sm);
+  line-height: 1px;
 }
 
 .shoe__name span{
   color: rgb(150, 150, 150);
   font-size: var(--size-xs);
+  line-height: 10px;
 }
 
 .shoe__name p{
@@ -155,14 +157,14 @@ opacity: .7;
 
 .pro1 img{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .cart{
-  color: rgb(22, 22, 122);
+  color: rgb(22, 22, 122, .8);
   position: absolute;
-  bottom: 150px;
-  left: 150px;
+  top: 34px;
+  left: -6px;
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -179,7 +181,6 @@ opacity: .7;
   transform: scale(1.1);
   opacity: 1;
 }
-
 
 
 /* xs */
