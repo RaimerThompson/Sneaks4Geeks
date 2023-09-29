@@ -84,6 +84,7 @@ opacity: .7;
 
 .hero__new-release-container{
   position: relative;
+  margin-left: 2rem;
 }
 
 .hero__exclusive-container{
@@ -113,7 +114,7 @@ opacity: .7;
   background: inherit;
   color: black;
   border: .5px solid rgb(255, 135, 55);
-  transition: .5s;
+  transition: .3s;
 }
 
 #product {
@@ -181,6 +182,7 @@ opacity: .7;
   transform: scale(1.1);
   opacity: 1;
 }
+
 
 
 /* xs */
