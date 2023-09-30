@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .hamburger_butn{
+    background: transparent;
+    border: 10px solid black;
+    border-radius: 1rem;
+  }
+
+  .hamburger_butn:hover :is(.top, .bottom){
+    y: 45;
+  }
+
+  .hamburger_butn:hover .top{
+    rotate: 45deg;
+    fill: inherit;
+  }
+
+  .hamburger_butn:hover .middle{
+    opacity: 0;
+  }
+
+  .hamburger_butn:hover .bottom{
+    rotate: -45deg;
+    fill: inherit;
+  }
+
+  .hamburger_butn .line{
+    transition: 
+    y 300ms ease-in 300ms,
+    rotate 300ms ease-in,
+    opacity 0ms 300ms;
+    transform-origin: center;
+  }
+
+  .hamburger_butn:hover .line{
+    transition: 
+    y 300ms ease-in,
+    rotate 300ms ease-in 300ms,
+    opacity 0ms 300ms;
+  }
+
+
+  .hamburger_butn[aria-expanded="true"] .top{
+    x
+  }
+
+</style>
+<body>
+  
+<button class="hamburger_butn" aria-controls="primary-navigation" aria-expanded="false">
+  <svg class="hamburger" viewBox="0 0 100 100" width="250">
+    <rect class="top line" 
+    width="80" height="10" 
+    x="10" y="25" rx="3.5">
+  </rect>
+    <rect class="middle line"
+     width="80" height="10" 
+     x="10" y="45" rx="3.5">
+    </rect>
+    <rect class="bottom line" 
+    width="80" height="10" 
+    x="10" y="65" rx="3.5">
+  </rect>
+  </svg>
+</button>
+
+
+</body>
+</html>
