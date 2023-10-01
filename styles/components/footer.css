@@ -1,0 +1,30 @@
+.footer{
+  margin-top: 2rem;
+  margin-bottom: .8rem;
+}
+
+.copyright {
+  text-align: center;
+  color: rgb(22, 22, 122);
+  font-size: var(--size-xs);
+}
+
+
+/* xs */
+/* @media (max-width: 475px) {} */
+
+/* sm */
+/* @media (max-width: 640px) {} */
+
+/* md */
+/* @media (max-width: 768px) {} */
+
+/* Lg */
+/* @media (max-width: 1024px) {} */
+
+/* xL */
+/* @media (max-width: 1288px) {} */
+
+/* 2xL */
+/* @media (max-width: 1536px) {}   */
+

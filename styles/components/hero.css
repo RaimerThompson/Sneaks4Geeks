@@ -57,8 +57,7 @@
 .fa-chevron-right{
   cursor: pointer;
   position: relative;
-  width: 50%;
-  margin: auto;
+  width: 0%;
   z-index: 2;
   opacity: .4;
   color: black;
@@ -78,6 +77,8 @@ opacity: .7;
   display: flex;
   position: relative;
   justify-content: center;
+  align-items: center;
+  text-align: end;
   gap: 2rem;
   margin-bottom: 3rem;
   }
@@ -189,10 +190,18 @@ opacity: .7;
 /* @media (max-width: 475px) {} */
 
 /* sm */
-/* @media (max-width: 640px) {} */
+@media (max-width: 640px) {
+  .hero__new-release-container{
+    text-align: center;
+  }
+}
 
 /* md */
-/* @media (max-width: 768px) {} */
+@media (max-width: 768px) {
+   .hero__new-release-container{
+    text-align: center;
+  }
+}
 
 /* Lg */
 /* @media (max-width: 1024px) {} */

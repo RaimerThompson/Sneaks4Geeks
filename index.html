@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/components/hero.css">
   <link rel="stylesheet" href="styles/components/banner.css">
   <link rel="stylesheet" href="styles/components/contact.css">
+  <link rel="stylesheet" href="styles/components/footer.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
   
@@ -19,7 +20,7 @@
 <body>
   <!-- Header Begins-->
   <header class="header container">
-    <nav>
+    <nav id="nav">
       <ul class="header__menu-logo">
         <li>
           <a class="header__logo" href="">Sneaks<span class="logo__number4">4</span>Geeks</a>
@@ -47,15 +48,15 @@
             <svg class="hamburger" viewBox="0 0 100 100" width="250">
               <rect class="top line" 
               width="80" height="10" 
-              x="10" y="30" rx="3.5">
+              x="10" y="15" rx="3.5">
             </rect>
               <rect class="middle line"
                width="80" height="10" 
-               x="10" y="60" rx="3.5">
+               x="10" y="45" rx="3.5">
               </rect>
               <rect class="bottom line" 
               width="80" height="10" 
-              x="10" y="90" rx="3.5">
+              x="10" y="75" rx="3.5">
             </rect>
             </svg>
           </button>
@@ -91,7 +92,7 @@
    <div class="hero__nav-button">
     <div id="backBtn" onclick="plusSlides(-1)">
     <i class="fa-solid fa-chevron-left"></i>
-  </div> 
+    </div> 
     <div id="nextBtn" onclick="plusSlides(1)">
       <i class="fa-solid fa-chevron-right"></i>
     </div> 
@@ -245,10 +246,13 @@
   </section> 
 
  
-  <footer></footer>
+  <footer class="footer section container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="footer__copyright copyright">Sneaks4Geeks <span>&copy;</span> 2023 Raimer Thompson </div>
+  </footer>
+  
 </body>
 <script src="main.js"></script>
-<script>
-
-</script>
 </html>

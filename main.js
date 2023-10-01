@@ -1,3 +1,23 @@
+const menuBtn = document.querySelector('.hamburger__btn');
+const mobileNav = document.getElementById('navbar');
+let menuOpen = false;
+
+menuBtn.addEventListener('click', () => {
+  if (!menuOpen) {
+    menuBtn.classList.add('close');
+    menuOpen = true;
+    mobileNav.style.display = 'flex';
+    mobileNav.classList.add('active');
+   }else {
+    menuBtn.classList.remove('close');
+    menuOpen = false;
+    mobileNav.style.display = 'flex';
+    mobileNav.classList.remove('active');
+   }
+})
+
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -29,18 +49,3 @@ function showSlides(n) {
 
 
 
-const menuBtn = document.querySelector('.hamburger__menu-btn');
-const mobileNav = document.querySelector('.header__menu');
-let menuOpen = false;
-
-menuBtn.addEventListener('click', () => {
-  if (!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-    mobileNav.style.display = 'flex';
-   }else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
-    mobileNav.style.display = 'none';
-   }
-})

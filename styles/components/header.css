@@ -31,6 +31,7 @@ ul li a{
 
 .header__logo{
 color: rgb(22, 22, 122);
+font-weight: 600;
 }
 
 .logo__number4{
@@ -45,8 +46,8 @@ color: rgb(22, 22, 122);
 }
 
 .header__link a{
-  color: rgb(40, 40, 40);
-  font-weight: 300;
+  color: rgb(22, 22, 122, .7);
+  font-weight: 400;
 }
 
 .header__link a:hover,
@@ -175,7 +176,7 @@ color: rgb(22, 22, 122);
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: .5rem;
+    gap: 1.5rem;
   }
 
 
@@ -193,8 +194,13 @@ color: rgb(22, 22, 122);
     height: 100vh;
     width: 200px;
     background-color: white;
-    /* box-shadow: 10px 20px 45px rgb(22, 22, 122, .7); */
     padding: 80px 0 0 20px;
+    transition: .2s ease-in forwards;
+  }
+
+  #navbar.active{
+    right: 0;
+    box-shadow: 10px 20px 45px rgb(22, 22, 122, .7);
   }
 
   .header__menu-right{
@@ -205,49 +211,63 @@ color: rgb(22, 22, 122);
     width: 20px;
     fill: rgb(22, 22, 122, .7);
     border-radius: 2px;
-    transition: all .1s ease-in-out;
+    position: relative;
+    top: 4px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: 1s ease-in forwards;
     cursor: pointer;
   }
   
-  .hamburger__btn:hover :is(.top, .bottom){
+  .hamburger__btn.close :is(.top, .bottom){
     y: 45;
   }
   
-  .hamburger__btn:hover .top{
+  .hamburger__btn.close .top{
     rotate: 45deg;
-    fill: rgb(255, 135, 55, .75);
+    fill: rgb(22, 22, 122);
   }
   
-  .hamburger__btn:hover .middle{
+  .hamburger__btn.close .middle{
     fill: rgb(255, 135, 55, .85);
     opacity: 0;
   }
   
-  .hamburger__btn:hover .bottom{
+  .hamburger__btn.close .bottom{
     rotate: -45deg;
-    fill: rgb(255, 135, 55, .85);
+    fill: rgb(22, 22, 122);
   }
   
   .hamburger__btn .line{
     transition: 
     y 250ms ease-in 250ms,
     rotate 250ms ease-in,
-    fill 1.5s,
+    fill 1s,
     opacity 0ms 250ms;
     transform-origin: center;
   }
   
-  .hamburger__btn:hover .line{
+  .hamburger__btn.close .line{
     transition: 
     y 250ms ease-in,
     rotate 250ms ease-in 250ms,
-    fill 1.5s,
+    fill 1s,
     opacity 0ms 250ms;
+  }
+
+  .hamburger__btn.close{
+  
+    left: -150px;
   }
 }
 
 /* md */
-/* @media (max-width: 768px) {} */
+@media (max-width: 768px) {
+  #navbar{
+    gap: 1.1rem;
+  }
+}
 
 /* Lg */
 /* @media (max-width: 1024px) {} */
