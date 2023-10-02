@@ -12,19 +12,24 @@
 
 .banner{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   min-width: 580px;
   height: 50vh;
   background-size: cover;
   background-position: center;
   padding: 2rem;
-  filter:grayscale(50%) ;
+  filter:grayscale(50%);
+  position: relative;
+  color: white;
+  gap: .7rem;
 }
 
 .banner1{
   background-image: url("/images/Timberland-50th-2400x1157-04.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
 }
 
 .banner:hover{
@@ -33,17 +38,27 @@
 
 .banner2{
   background-image: url(/images/Nike-sneaks/nike-banner-nikepage.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
 
+.banner2 h2{
+  font-size: 1.4rem;
+  
 }
 
 .banner__btn {
   background: transparent;
-  color: black;
-  border: .5px solid black;
+  color: white;
+  font-weight: 600;
+  border: 2px solid rgb(255, 255, 255);
 }
 
-.banner__btn:hover{
-  border-color: white;
+
+.banner:hover  button.banner__btn{
+  border-color: rgb(255, 135, 55);
 }
 
 

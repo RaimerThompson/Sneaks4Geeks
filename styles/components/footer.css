@@ -9,6 +9,11 @@
   font-size: var(--size-xs);
 }
 
+.footer span{
+  color:  rgb(255, 135, 55);
+  font-weight: 900;
+}
+
 
 /* xs */
 /* @media (max-width: 475px) {} */

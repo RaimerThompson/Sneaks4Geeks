@@ -38,29 +38,53 @@
 
           <i class="fa-solid fa-magnifying-glass"></i>
          
-          <a class="header__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg"></i> Cart</a>
+          <div class="header__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg"></i> Cart<span class="header__cart-span">0</span></div>
         </li>
-      </ul>
-      <div id="mobile">
-        <a class="header__cart mobile__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg mobile__cart-fa"></i> Cart</a>
-        <div class="hamburger__menu-btn">
-          <button class="hamburger__btn" aria-controls="primary-navigation" aria-expanded="false">
-            <svg class="hamburger" viewBox="0 0 100 100" width="250">
-              <rect class="top line" 
-              width="80" height="10" 
-              x="10" y="15" rx="3.5">
-            </rect>
-              <rect class="middle line"
-               width="80" height="10" 
-               x="10" y="45" rx="3.5">
+        <div id="mobile">
+          <!-- <div class="header__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg mobile__cart-fa"></i> Cart <span class="header__cart-span">0</span></div> -->
+          <div class="hamburger__menu-btn">
+            <button class="hamburger__btn" aria-controls="primary-navigation" aria-expanded="false">
+              <svg class="hamburger" viewBox="0 0 100 100" width="250">
+                <rect class="top line" 
+                width="80" height="10" 
+                x="10" y="15" rx="3.5">
               </rect>
-              <rect class="bottom line" 
-              width="80" height="10" 
-              x="10" y="75" rx="3.5">
-            </rect>
-            </svg>
-          </button>
+                <rect class="middle line"
+                 width="80" height="10" 
+                 x="10" y="45" rx="3.5">
+                </rect>
+                <rect class="bottom line" 
+                width="80" height="10" 
+                x="10" y="75" rx="3.5">
+              </rect>
+              </svg>
+            </button>
+          </div>
         </div>
+      </ul>
+
+    
+
+      <div id="cart__menu">
+        <h2 class="cart__title">Your Cart</h2>
+        <i class="fa-solid fa-arrow-right-long close__cart"></i>
+        <div class="cart__content">
+          <div class="cart__box">
+            <img src="/images/Nike-sneaks/nike101/nike101.webp" alt="" class="cart__img">
+            <div class="cart__item-price">$25.00</div>
+            <i class="fa-solid fa-trash-can item__remove"></i>
+          </div>
+          
+        </div>
+        <div class="total">
+          <div class="total__title">Total</div>
+          <div class="total__price">$0</div>
+        </div>
+        <div class="checkout__btn-div">
+           <button class="checkout__btn btn">CHECK OUT</button>
+        </div>
+       
+      
       </div>
       
     </nav>
@@ -76,13 +100,13 @@
       <div class="hero__scroll-banner cover">
        <div class="hero__scroll-div scroll-images">
       
-        <div class="mySlides">
-          <img class="child-img" src="images/New-balance-nyc-banner.webp" alt="">
+        <div class="mySlides slide1">
+          <img class="child-img" src="images/Nike-sneaks/New-balance-nyc-banner101.jpg" alt="">
         </div>
-        <div class="mySlides">
-          <img class="child-img" src="images/nike-dunks-nyc-banner.webp" alt="">
+        <div class="mySlides slide2">
+          <img class="child-img" src="images/Nike-sneaks/nike-dunks-nyc-banner101.jpg" alt="">
         </div>
-        <div class="mySlides">
+        <div class="mySlides slide3">
           <img class="child-img" src="images/Nike-in-the-woods-jordan1s.jpg" alt="">
         </div>
       </div>
@@ -113,7 +137,8 @@
           <img src="images/nike-sneaks/nike101/nike101.webp" alt="" onmouseover="src='images/nike-sneaks/nike101/nike102.webp'" onmouseout="src='images/nike-sneaks/nike101/nike101.webp'">
           <div class="shoe__name">
           <span class="brand">Nike</span>
-          <p>Nike Dunk Low</p>
+          <p clas="pro__name">Nike Dunk Low</p>
+          <p class="pro__price">$109.95</p>
           <i class="fa-solid fa-cart-shopping cart"></i>
           </div>
         </div>
@@ -122,7 +147,8 @@
           <img src="images/Adi-sneaks/adi201/adi201.webp" alt="" onmouseover="src='images/Adi-sneaks/adi201/adi202.webp'" onmouseout="src='images/Adi-sneaks/adi201/adi201.webp'">
           <div class="shoe__name">
           <span class="brand">Adidas</span>
-          <p>Adidas Red Samba</p>
+          <p clas="pro__name">Adidas Red Samba</p>
+          <p class="pro__price">$99.95</p>
           <i class="fa-solid fa-cart-shopping cart"></i>
           </div>
         </div>
@@ -131,7 +157,8 @@
         <img src="images/nike-sneaks/nike301/nike301.webp" alt="" onmouseover="src='images/nike-sneaks/nike301/nike302.webp'" onmouseout="src='images/nike-sneaks/nike301/nike301.webp'">
         <div class="shoe__name">
         <span class="brand">Nike</span>
-        <p>Nike Air Max 1</p>
+        <p clas="pro__name">Nike Air Max 1</p>
+        <p class="pro__price">$140.00</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
         </div>
       </div>
@@ -141,6 +168,7 @@
         <div class="shoe__name">
         <span class="brand">New Balance</span>
         <p>New Balance 580 v2</p>
+        <p class="pro__price">$129.95</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
         </div>
       </div>
@@ -149,7 +177,8 @@
         <img src="images/nike-sneaks/nike201/nike201.webp" alt="" onmouseover="src='images/nike-sneaks/nike201/nike202.webp'" onmouseout="src='images/nike-sneaks/nike201/nike201.webp'">
         <div class="shoe__name">
         <span class="brand">Nike</span>
-        <p>Nike Blazer Low</p>
+        <p clas="pro__name">Nike Blazer Low</p>
+        <p class="pro__price">$89.95</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
         </div>
       </div>
@@ -171,7 +200,8 @@
           <img src="images/nike-sneaks/nike401/nike401.webp" alt="" onmouseover="src='images/nike-sneaks/nike401/nike402.webp'" onmouseout="src='images/nike-sneaks/nike401/nike401.webp'">
           <div class="shoe__name">
           <span class="brand">Nike</span>
-          <p>Nike Air Max 97 OG</p>
+          <p clas="pro__name">Nike Air Max 97 OG</p>
+          <p class="pro__price">$185.00</p>
           <i class="fa-solid fa-cart-shopping cart"></i>
           </div>
         </div>
@@ -180,7 +210,8 @@
         <img src="images/nike-sneaks/nike601/601.jpg" alt="" onmouseover="src='images/nike-sneaks/nike601/602.jpg'" onmouseout="src='images/nike-sneaks/nike601/601.jpg'">
         <div class="shoe__name">
         <span class="brand">Nike</span>
-        <p>Nike Air Max 1</p>
+        <p clas="pro__name">Nike Air Max 1</p>
+        <p class="pro__price">$160.00</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
         </div>
       </div>
@@ -189,7 +220,8 @@
         <img src="images/nike-sneaks/nike1101/1101.webp" alt="" onmouseover="src='images/nike-sneaks/nike1101/1104.webp'" onmouseout="src='images/nike-sneaks/nike1101/1101.webp'">
         <div class="shoe__name">
         <span class="brand">Nike</span>
-        <p>Nike ACG Watercat Phantom</p>
+        <p clas="pro__name">Nike ACG Watercat Phantom</p>
+        <p class="pro__price">$125.00</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
         </div>
       </div>
@@ -198,7 +230,8 @@
         <img src="images/nike-sneaks/nike701/701.webp" alt="" onmouseover="src='images/nike-sneaks/nike701/702.jpg'" onmouseout="src='images/nike-sneaks/nike701/701.webp'">
         <div class="shoe__name">
         <span class="brand">Nike</span>
-        <p>Nike Air Max 1</p>
+        <p clas="pro__name">Nike Air Max 1</p>
+        <p class="pro__price">$159.95</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
         </div>
       </div>
@@ -207,8 +240,10 @@
         <img src="images/nike-sneaks/nike801/801.jpg" alt="" onmouseover="src='images/nike-sneaks/nike801/802.jpg'" onmouseout="src='images/nike-sneaks/nike801/801.jpg'">
         <div class="shoe__name">
         <span class="brand">Nike</span>
-        <p>Nike Blazer Mid '77</p>
+        <p clas="pro__name">Nike Blazer Mid '77</p>
+        <p class="pro__price">$109.95</p>
         <i class="fa-solid fa-cart-shopping cart"></i>
+       
         </div>
       </div>
       
@@ -219,15 +254,13 @@
   <section id="banner" class="banner__container section container">
     <div class="banner__box">
       <div class="banner banner1">
-        <h4>Crazy deals</h4>
-        <h2>Buy 1 get 1 free</h2>
-        <span>The best classic sneakers is on sale</span>
+        <h4>THE NEW YORKER</h4>
+        <h2>THE EPITOME OF NYC FOOTWEAR</h2>
         <button class="banner__btn btn">Learn More</button>
       </div>
       <div class="banner banner2">
-        <h4>Crazy deals</h4>
-        <h2>Buy 1 get 1 free</h2>
-        <span>The best classic sneakers is on sale</span>
+        <h4>NIKE DEALS</h4>
+        <h2>THE CLASSICS JUST GOT BETTER</h2>
         <button class="banner__btn btn">Learn More</button>
       </div>
     </div>

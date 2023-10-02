@@ -12,7 +12,7 @@ nav{
   padding: 1.5rem 1rem;
   background: rgb(255, 255, 255);
   box-shadow: 1px 1px 1px .5px rgba(147, 147, 147, 0.2);
-  z-index: 10;
+  z-index: 100;
 }
 
 #mobile{
@@ -46,7 +46,7 @@ font-weight: 600;
 }
 
 .header__link a{
-  color: rgb(22, 22, 122, .7);
+  color: rgb(50, 50, 50, .8);
   font-weight: 400;
 }
 
@@ -69,51 +69,6 @@ font-weight: 600;
   gap: 1.2rem;
 }
 
-/* .hamburger__btn{
-  width: 20px;
-  fill: rgb(22, 22, 122, .7);
-  border-radius: 2px;
-  transition: all .1s ease-in-out;
-  cursor: pointer;
-}
-
-.hamburger__btn:hover :is(.top, .bottom){
-  y: 45;
-}
-
-.hamburger__btn:hover .top{
-  rotate: 45deg;
-  fill: rgb(255, 135, 55, .75);
-}
-
-.hamburger__btn:hover .middle{
-  fill: rgb(255, 135, 55, .85);
-  opacity: 0;
-}
-
-.hamburger__btn:hover .bottom{
-  rotate: -45deg;
-  fill: rgb(255, 135, 55, .85);
-}
-
-.hamburger__btn .line{
-  transition: 
-  y 250ms ease-in 250ms,
-  rotate 250ms ease-in,
-  fill 1.5s,
-  opacity 0ms 250ms;
-  transform-origin: center;
-}
-
-.hamburger__btn:hover .line{
-  transition: 
-  y 250ms ease-in,
-  rotate 250ms ease-in 250ms,
-  fill 1.5s,
-  opacity 0ms 250ms;
-} */
-
-
 .fa-magnifying-glass:hover{
   opacity: .8;
   cursor: pointer;
@@ -129,40 +84,131 @@ font-weight: 600;
 
 .header__cart{
   text-decoration: none;
-  color: rgb(22, 22, 122);
+  color: rgb(50, 50, 50, .85);
   font-weight: 300;
+  cursor: pointer;
 }
 
 .header__cart:hover{
   opacity: .8;
 }
 
-.header__cart:active{
+.header__cart{
   opacity: 1;
+  right: 0;
 }
 
-/* .header__cart::after{
+.header__cart-span{
   content: attr(value);
-  font-size: 3px;
+  font-size: 8px;
   width: 0px;
   height: 50px;
   background: rgb(255, 135, 55);
+  color: white;
+  font-weight: 900;
   border-radius: 50%;
   padding: 6px;
   position: relative;
-  top: -12px;
-  right: 41px;
+  top: -18px;
+  right: 43px;
   opacity: .9;
-} */
+}
 
 .fa-solid,
 .fa-regular{
-  color: rgba(22, 22, 122, .75);
+  color: rgb(50, 50, 50, .8);
 }
 
+#cart__menu{
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 10px 20px 45px rgb(255, 135, 55, .25);
+  transition: .7s;
+}
 
+#cart__menu.active{
+  right: 0;
+}
 
+.cart__title{
+  color: rgb(50, 50, 50, .85);
+}
 
+.cart__box{
+  display: grid;
+  grid-template-columns: 30% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart__img{
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.cart__remove{
+  color: rgb(255, 135, 55, .85);
+  cursor: pointer;
+}
+
+.total{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .5rem;
+  border-top: 1px solid rgb(50, 50, 50);
+}
+
+.total__title{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: .5rem;
+}
+
+.total__price{
+  margin-left: .5rem;
+  margin-top: .5rem;
+}
+
+.checkout__btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.checkout__btn{
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkout__btn:hover{
+  background: inherit;
+  color: black;
+  font-weight: 600;
+  border: 1px solid rgb(255, 135, 55);
+  transition: .1s;
+}
+
+.close__cart{
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(255, 135, 55, .9);
+}
+
+.close__cart:hover{
+  opacity: .7;
+}
 
 
 /* xs */
@@ -195,21 +241,26 @@ font-weight: 600;
     width: 200px;
     background-color: white;
     padding: 80px 0 0 20px;
-    transition: .2s ease-in forwards;
+    transition: .7s ease-in forwards;
   }
 
   #navbar.active{
     right: 0;
     box-shadow: 10px 20px 45px rgb(22, 22, 122, .7);
+    transition: .7s ease-in-out forwards;
   }
 
-  .header__menu-right{
-    display: none;
+  /* .header__menu-right{
+    display: 
+  } */
+
+  .fa-magnifying-glass{
+    display: none !important;
   }
 
   .hamburger__btn{
     width: 20px;
-    fill: rgb(22, 22, 122, .7);
+    fill: rgb(50, 50, 50, .85);
     border-radius: 2px;
     position: relative;
     top: 4px;
@@ -226,7 +277,7 @@ font-weight: 600;
   
   .hamburger__btn.close .top{
     rotate: 45deg;
-    fill: rgb(22, 22, 122);
+    fill: rgb(255, 135, 55, .85);
   }
   
   .hamburger__btn.close .middle{
@@ -236,7 +287,7 @@ font-weight: 600;
   
   .hamburger__btn.close .bottom{
     rotate: -45deg;
-    fill: rgb(22, 22, 122);
+    fill: rgb(255, 135, 55, .85);
   }
   
   .hamburger__btn .line{

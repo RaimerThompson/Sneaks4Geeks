@@ -8,6 +8,7 @@ menuBtn.addEventListener('click', () => {
     menuOpen = true;
     mobileNav.style.display = 'flex';
     mobileNav.classList.add('active');
+    
    }else {
     menuBtn.classList.remove('close');
     menuOpen = false;
@@ -15,6 +16,125 @@ menuBtn.addEventListener('click', () => {
     mobileNav.classList.remove('active');
    }
 })
+;
+
+
+
+//Cart Toggle //
+const cartBtn = document.querySelector('.header__cart');
+const cart = document.getElementById('cart__menu');
+const closeBtn = document.querySelector('.close__cart');
+
+
+ if (cartBtn){
+  cartBtn.addEventListener('click', () => {
+    cart.classList.add('active')
+  })  
+}
+if(closeBtn) {    
+closeBtn.addEventListener('click', () => {
+  cart.classList.remove('active');
+})
+}
+;
+
+
+//add to cart - local storage//
+let carts = document.querySelectorAll('.cart')
+
+let products = [
+  {
+    name: 'Nike Dunk Low',
+    price: 109.95,
+    inCart: 0  
+  },
+  {
+    name: 'Adidas Red Samba',
+    price: 99.95,
+    inCart: 0  
+  },
+  {
+    name: 'Nike Air Max 1',
+    price: 140,
+    inCart: 0  
+  },
+  {
+    name: 'New Balanca 580 v2',
+    price: 129.95,
+    inCart: 0  
+  },
+  {
+    name: 'Nike Blazer Low',
+    price: 89.95,
+    inCart: 0  
+  },
+  {
+    name: 'Nike Air Max 97 OG',
+    price: 185,
+    inCart: 0  
+  },
+  {
+    name: 'Nike Air Max 1',
+    price: 160,
+    inCart: 0  
+  },
+  {
+    name: 'Nike ACG Watercat Phantom',
+    price: 125,
+    inCart: 0  
+  },
+  {
+    name: 'Nike Air Max 1',
+    price: 159.95,
+    inCart: 0  
+  },
+  {
+    name: 'Nike Blazer mid 77',
+    price: 109.95,
+    inCart: 0  
+  }
+];
+
+for(let i=0; i < carts.length; i++) {
+  carts[i].addEventListener('click', () => {
+    cartNumbers(products[i]);
+  })
+}
+
+function onLoadCartNumbers(){
+  let productNumbers = localStorage.getItem('cartNumbers');
+
+  if(productNumbers) {
+    document.querySelector('.header__cart span').textContent = productNumbers;
+  }
+}
+
+function cartNumbers(products) {
+
+  let productNumbers = localStorage.getItem('cartNumbers');
+
+  productNumbers = parseInt(productNumbers);
+
+  if (productNumbers){
+    localStorage.setItem('cartNumbers', productNumbers + 1);
+    document.querySelector('.header__cart span').textContent = productNumbers + 1;
+  } else {
+    localStorage.setItem('cartNumbers', 1);
+    document.querySelector('header__cart span')
+  } 
+  setItems (products);
+}
+
+function setItems(products){
+  console.log("inside of setItems funstion");
+  console.log("my prodyctr os", products);
+}
+
+
+onLoadCartNumbers();
+
+;
+
 
 
 
@@ -44,8 +164,7 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
-
+;
 
 
