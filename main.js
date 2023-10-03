@@ -41,7 +41,6 @@ closeBtn.addEventListener('click', () => {
 
 //add to cart - local storage//
 let carts = document.querySelectorAll('.cart')
-
 let products = [
   {
     name: 'Nike Dunk Low',
@@ -55,7 +54,7 @@ let products = [
   },
   {
     name: 'Nike Air Max 1',
-    price: 140,
+    price: 140.00,
     inCart: 0  
   },
   {
@@ -70,17 +69,17 @@ let products = [
   },
   {
     name: 'Nike Air Max 97 OG',
-    price: 185,
+    price: 185.00,
     inCart: 0  
   },
   {
     name: 'Nike Air Max 1',
-    price: 160,
+    price: 160.00,
     inCart: 0  
   },
   {
     name: 'Nike ACG Watercat Phantom',
-    price: 125,
+    price: 125.00,
     inCart: 0  
   },
   {
@@ -98,19 +97,18 @@ let products = [
 for(let i=0; i < carts.length; i++) {
   carts[i].addEventListener('click', () => {
     cartNumbers(products[i]);
+    totalCost(products[i])
   })
 }
 
 function onLoadCartNumbers(){
   let productNumbers = localStorage.getItem('cartNumbers');
-
   if(productNumbers) {
     document.querySelector('.header__cart span').textContent = productNumbers;
   }
 }
 
 function cartNumbers(products) {
-
   let productNumbers = localStorage.getItem('cartNumbers');
 
   productNumbers = parseInt(productNumbers);
@@ -126,8 +124,41 @@ function cartNumbers(products) {
 }
 
 function setItems(products){
-  console.log("inside of setItems funstion");
-  console.log("my prodyctr os", products);
+  let cartItems = localStorage.getItem('productsInCart');
+  cartItems = JSON.parse(cartItems);
+
+  if (cartItems != null) {
+    if (cartItems[products.name] == undefined){
+      cartItems = {
+        ...cartItems,
+        [products.name]: products
+      }
+    }
+    cartItems[products.name].inCart += 1;
+  } else {
+    products.inCart = 1;
+    cartItems = {
+     [products.name]: products
+    }
+  }
+  localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+}
+
+function totalCost(products) {
+  // console.log('the product price is', products.price);
+  let cartCost = localStorage.getItem('totalCost');
+ 
+  console.log('my cart cost is ', cartCost);
+  console.log(typeof cartCost);
+
+  if (cartCost != null){
+    cartCost = parseInt(cartCost);
+    localStorage.setItem('totalCost', cartCost + products.price);
+  } else {
+    localStorage.setItem('totalCost', products.price);
+  }
+
+  
 }
 
 
