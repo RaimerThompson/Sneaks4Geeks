@@ -162,7 +162,7 @@ opacity: .7;
   border-radius: 4px;
 }
 
-.cart{
+.add__cart{
   color: rgb(22, 22, 122, .8);
   position: absolute;
   top: 36px;
@@ -175,11 +175,11 @@ opacity: .7;
   cursor: pointer;
 }
 
-.cart:hover{
+.add__cart:hover{
   opacity: .7;
 }
 
-.cart:active{
+.add__cart:active{
   transform: scale(1.1);
   opacity: 1;
   color: rgb(255, 135, 55);
