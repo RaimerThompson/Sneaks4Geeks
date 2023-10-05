@@ -80,9 +80,14 @@ addCartBtns.forEach(btn =>{
   btn.addEventListener('click', handleAddCartItem);
 });
 
+//buy order checkout
+const buyBtn = document.querySelector('.checkout__btn');
+buyBtn.addEventListener('click', handleBuyOrder)
 }
 
 //handle
+let itemsAdded = [];
+
 function handleAddCartItem() {
   let product = this.parentElement;
   let title = product.querySelector(".pro__name").innerHTML;
@@ -90,11 +95,36 @@ function handleAddCartItem() {
   let imgSrc = product.querySelector(".pro__img").src;
   console.log(title, price, imgSrc);
 
+  let newToAdd = {
+    title,
+    price,
+    imgSrc,
+  };
+
+
+//if item already in cart
+  if(itemsAdded.find((el) => el.title == newToAdd.title)) {
+    alert('Item is already in your cart');
+    return;
+  }else {
+    itemsAdded.push(newToAdd);
+  }
+
+//add to cart items
+  let cartBoxElement = cartBoxComponent(title, price, imgSrc);
+  let newNode = document.createElement('div');
+  newNode.innerHTML = cartBoxElement;
+  const cartContent = cart.querySelector('.cart__content');
+  cartContent.appendChild(newNode);
+
+  update();
 }
 
 
 function handleRemoveCartItems(){
   this.parentElement.remove();
+  itemsAdded = itemsAdded.filter(el => el.title != this.parentElement.querySelector('.cart__title-name').innerHTML
+  );
 
   update();
 }
@@ -108,6 +138,12 @@ function handleChangeItemQuantity(){
   update();
 }
 
+function handleBuyOrder(){
+  if(itemsAdded.length <= 0){
+    alert('Please add items before checking out. Thank You');
+    return;
+  }
+}
 
 //update function
 
@@ -128,7 +164,22 @@ total = total.toFixed(2); //keep the last 2 digits in price total
   totalElement.innerHTML = '$' + total;
 }
 
+//html show on cart
+function cartBoxComponent(title, price, imgSrc){
 
+  return  `
+  <div class="cart__box">
+    <img src=${imgSrc} alt="" class="cart__img">
+    <div class="details__box">
+      <div class="cart__title-name">${title}</div>
+      <div class="cart__item-price">${price}</div>
+      <input type="number" value="1" class="cart__quantity">
+    </div>
+    <i class="fa-solid fa-trash-can item__remove"></i>
+  </div>`
+}
+
+;
 
 addEvents();
 ;

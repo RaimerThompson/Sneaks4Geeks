@@ -115,31 +115,34 @@ opacity: .7;
 
 #product {
   position: relative;
-  display: flex;
-  flex-direction: column;
+
 }
 
 .product__container{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-evenly;
   align-items: center;
-}
+  margin-top: 5rem;
 
-#product .pro1{
+}
+/* 
+#product {
   width: 15%;
   min-width: 200px;
   position: relative;
- 
-}
+} */
 
-.shoe__name{
+.pro1{
   position: relative;
   bottom: 40px;
   left: 16px;
   font-size: var(--size-sm);
   line-height: 1px;
+ 
 }
 
 .pro__price{
@@ -147,7 +150,7 @@ opacity: .7;
   font-weight: 300;
 }
 
-.shoe__name span{
+.pro1 span{
   color: rgb(150, 150, 150);
   font-size: var(--size-xs);
   line-height: 10px;
@@ -158,15 +161,15 @@ opacity: .7;
 }
 
 .pro1 img{
-  width: 100%;
+  width: 90%;
   border-radius: 4px;
 }
 
 .add__cart{
   color: rgb(22, 22, 122, .8);
   position: absolute;
-  top: 36px;
-  left: 55px;
+  bottom: 0;
+  right: 15px;
   width: 30px;
   height: 30px;
   background-color: transparent;
