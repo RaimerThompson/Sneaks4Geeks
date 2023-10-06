@@ -123,12 +123,12 @@ font-weight: 600;
   min-height: 100vh;
   padding: 20px;
   background-color: white;
-  box-shadow: 10px 20px 45px rgb(255, 135, 55, .25);
   transition: .7s;
 }
 
 #cart__menu.active{
   right: 0;
+  box-shadow: 10px 20px 45px rgb(255, 135, 55, .25);
 }
 
 .cart__title{

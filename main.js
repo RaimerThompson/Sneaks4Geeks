@@ -93,7 +93,6 @@ function handleAddCartItem() {
   let title = product.querySelector(".pro__name").innerHTML;
   let price = product.querySelector(".pro__price").innerHTML;
   let imgSrc = product.querySelector(".pro__img").src;
-  console.log(title, price, imgSrc);
 
   let newToAdd = {
     title,
