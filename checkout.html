@@ -37,7 +37,7 @@
         <li class="header__link-right">
           <!-- <i class="fa-regular fa-user"></i> -->
 
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
          
           <div class="header__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg"></i> Cart<span class="header__cart-span">0</span></div>
         </li>
@@ -64,15 +64,21 @@
         </div>
       </ul>
 
+      
+        <div class="search__container">
+          <form>
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+            <input type="text" id="search__item" class="search__input" placeholder="Search our shop" onkeyup="search()">
+            <i class="fa-solid fa-xmark search__icon-close"></i>
+          </form>
+        </div>
+      
+
       <div id="cart__menu">
         <h2 class="cart__title">Your Cart</h2>
         <i class="fa-solid fa-arrow-right-long close__cart"></i>
         <div class="cart__content">
-          <div class="cart__box">
-            <img src="/images/Nike-sneaks/nike101/nike101.webp" alt="" class="cart__img">
-            <div class="cart__item-price">$25.00</div>
-            <i class="fa-solid fa-trash-can item__remove"></i>
-          </div>
+
           
         </div>
         <div class="total">
@@ -82,8 +88,12 @@
         <div class="checkout__btn-div">
            <button class="checkout__btn btn">CHECK OUT</button>
         </div>
+       
+      
       </div>
-    </nav>    
+      
+    </nav>
+    
   </header>
 
   <section class="checkout section container">
