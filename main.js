@@ -1,6 +1,7 @@
 //handle
 let itemsAdded = [];
 let cartTotal = 0;
+let totalQuantity = 0;
 
 const menuBtn = document.querySelector('.hamburger__btn');
 const mobileNav = document.getElementById('navbar');
@@ -68,6 +69,7 @@ function update(){
   updateTotal();
   saveCartItems();
   loadCartItems();
+  updateCartIconQuantity()
 }
 
 
@@ -146,6 +148,7 @@ function handleAddCartItem() {
   cartContent.appendChild(newNode);
 
   update();
+  updateCartIconQuantity();
 }
 
 function handleRemoveCartItems() {
@@ -156,6 +159,7 @@ function handleRemoveCartItems() {
   itemsAdded = itemsAdded.filter((item) => item.title !== title);
 
   update();
+  updateCartIconQuantity();
 }
 
 
@@ -210,6 +214,7 @@ function updateTotal(){
     let quantity = cartBox.querySelector('.cart__quantity').value;
     total += price * quantity;
   });
+  
 
 total = total.toFixed(2); //keep the last 2 digits in price total
 // total = Math.round(total * 100) / 100;
@@ -218,6 +223,7 @@ total = total.toFixed(2); //keep the last 2 digits in price total
 
 //save total to local storage
 localStorage.setItem('cartTotal', total);
+
 }
 
 //html show on cart
@@ -234,6 +240,20 @@ function cartBoxComponent(title, price, imgSrc, quantity) {
     </div>`;
 }
 addEvents();
+
+
+// Function to update the cart icon quantity and visibility
+function updateCartIconQuantity() {
+  const cartQuantity = document.querySelector('.cart__icon-quantity');
+  totalQuantity = itemsAdded.reduce((total, item) => total + parseInt(item.quantity), 0);
+  cartQuantity.textContent = totalQuantity;
+
+  if (totalQuantity > 0) {
+    cartQuantity.style.display = 'inline'; // Show the quantity badge
+  } else {
+    cartQuantity.style.display = 'none'; // Hide the quantity badge
+  }
+}
 
 
 
@@ -261,6 +281,7 @@ addEvents();
 
     // Save cartItems to local storage
     localStorage.setItem('cartItems', JSON.stringify(itemsAdded));
+  
   }
  // Function to load cart items from local storage
  function loadCartItems() {
@@ -285,11 +306,13 @@ addEvents();
 
 
 
+
 // Load and update cart items when the page loads
 window.addEventListener('load', function () {
     loadCartItems();
     addEvents();
     updateTotal();
+    updateCartIconQuantity();
 });
 
 

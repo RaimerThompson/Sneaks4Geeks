@@ -1,5 +1,5 @@
 :root{
-  --after-content: '2'
+  --after-content: '2';
 }
 
 header{
@@ -98,38 +98,23 @@ font-weight: 600;
   right: 0;
 }
 
-.cart__count::after{
-  content: var(--after-content);
-  font-size: 10px;
-  width: 10px;
+
+.cart__icon-quantity{
+  font-size: 12px;
+  width: 24px;
   background: rgb(255, 135, 55);
   color: white;
   font-weight: 900;
   border-radius: 50%;
-  padding: 6px;
+  padding: 5px;
   position: relative;
   top: -18px;
   right: 10px;
   opacity: .9;
+  text-align: center;
+  justify-content: center;
 }
 
-.header__cart-span{
-  content: var(--after-content);
-  font-size: 8px;
-  width: 10px;
-  height: 50px;
-  background: rgb(255, 135, 55);
-  color: white;
-  font-weight: 900;
-  border-radius: 50%;
-  padding: 6px;
-  position: relative;
-  top: -18px;
-  right: 43px;
-  opacity: .9;
-}
-
-.header__cart-span
 
 .fa-solid,
 .fa-regular{
