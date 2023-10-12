@@ -72,10 +72,6 @@
             <i class="fa-solid fa-xmark search__icon-close"></i>
           </form>
         </div>
-        
-<div id="search-results" class="search-results">
-  <!-- Results will be displayed here -->
-</div>
       <div class=".cart__box">
 
       </div>
@@ -285,13 +281,6 @@
   </footer>
 
   <script>
-    
-// Define your product data
-const products = [
-  { id: 1, name: "Nike Dunk Low" },
-  { id: 2, name: "Adidas Beige Samba" },
-  // Add more products here
-];
 //handle
 let itemsAdded = [];
 let cartTotal = 0;
@@ -713,68 +702,6 @@ addEvents();
             addEvents();
             updateTotal();
         });
-
-
-
-        
-//Search Toggle //
-const searchBtn = document.querySelector('.fa-magnifying-glass');
-const searchCt = document.querySelector('.search__container');
-const searchBtnClose = document.querySelector('.search__icon-close');
-
-
- if (searchBtn){
-  searchBtn.addEventListener('click', () => {
-    searchCt.classList.add('active')
-  })  
-}
-if(searchBtnClose) {    
-searchBtnClose.addEventListener('click', () => {
-  searchCt.classList.remove('active');
-})
-}
-;
-
-
-
-// Function to search for products
-function searchProducts() {
-  const searchInput = document.getElementById('search__item').value.toLowerCase();
-  
-  // Filter products that match the search input
-  const matchingProducts = products.filter(product => {
-    return (
-      product.name.toLowerCase().includes(searchInput) ||
-      product.id.toString().includes(searchInput)
-    );
-  });
-  
-  displayMatchingProducts(matchingProducts);
-}
-
-// Function to display matching products
-function displayMatchingProducts(matchingProducts) {
-  const resultsContainer = document.getElementById('search-results');
-  resultsContainer.innerHTML = '';
-
-  if (matchingProducts.length === 0) {
-    resultsContainer.innerHTML = 'No matching products found.';
-  } else {
-    matchingProducts.forEach(product => {
-      const resultItem = document.createElement('div');
-      resultItem.textContent = `Product ID: ${product.id}, Name: ${product.name}`;
-      resultsContainer.appendChild(resultItem);
-    });
-  }
-}
-
-// Add event listener to search input
-const searchInput = document.getElementById('search__item');
-searchInput.addEventListener('input', searchProducts);
-
-// You can also call searchProducts when the page loads to display all products
-searchProducts();
-
 
 
   </script>

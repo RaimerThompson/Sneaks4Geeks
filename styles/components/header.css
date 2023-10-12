@@ -114,10 +114,9 @@ font-weight: 600;
 }
 
 .header__cart-span{
-  display: none;
-  content: attr(value);
+  content: var(--after-content);
   font-size: 8px;
-  width: 0px;
+  width: 10px;
   height: 50px;
   background: rgb(255, 135, 55);
   color: white;

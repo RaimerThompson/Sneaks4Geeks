@@ -72,10 +72,6 @@
             <i class="fa-solid fa-xmark search__icon-close"></i>
           </form>
         </div>
-        
-<div id="search-results" class="search-results">
-  <!-- Results will be displayed here -->
-</div>
       <div class=".cart__box">
 
       </div>
@@ -285,17 +281,6 @@
   </footer>
 
   <script>
-    
-// Define your product data
-const products = [
-  { id: 1, name: "Nike Dunk Low" },
-  { id: 2, name: "Adidas Beige Samba" },
-  // Add more products here
-];
-//handle
-let itemsAdded = [];
-let cartTotal = 0;
-
     const menuBtn = document.querySelector('.hamburger__btn');
 const mobileNav = document.getElementById('navbar');
 let menuOpen = false;
@@ -369,217 +354,87 @@ function update(){
 
 //add events
 
-// function addEvents(){
-//   //remove item from cart
-//  // Add this code to your addEvents() function
-// cartContent.addEventListener('click', function (event) {
-//   if (event.target.classList.contains('item__remove')) {
-//     handleRemoveCartItems.call(event.target);
-//   }
-// });
+function addEvents(){
+  //remove item from cart
+ // Add this code to your addEvents() function
+cartContent.addEventListener('click', function (event) {
+  if (event.target.classList.contains('item__remove')) {
+    handleRemoveCartItems.call(event.target);
+  }
+});
 
 
-// //item quantity
-// // Add this code to your addEvents() function
-// cartContent.addEventListener('change', function (event) {
-//   if (event.target.classList.contains('cart__quantity')) {
-//     handleChangeItemQuantity.call(event.target);
-//   }
-// });
+//item quantity
+// Add this code to your addEvents() function
+cartContent.addEventListener('change', function (event) {
+  if (event.target.classList.contains('cart__quantity')) {
+    handleChangeItemQuantity.call(event.target);
+  }
+});
 
-// //add items to the cart
-// let addCartBtns = document.querySelectorAll('.add__cart');
-// addCartBtns.forEach(btn =>{
-//   btn.addEventListener('click', handleAddCartItem);
-// });
+//add items to the cart
+let addCartBtns = document.querySelectorAll('.add__cart');
+addCartBtns.forEach(btn =>{
+  btn.addEventListener('click', handleAddCartItem);
+});
  
 
-// //buy order checkout
-// const buyBtn = document.querySelector('.checkout__btn');
-// buyBtn.addEventListener('click', handleBuyOrder);
+//buy order checkout
+const buyBtn = document.querySelector('.checkout__btn');
+buyBtn.addEventListener('click', handleBuyOrder);
 
-// }
+}
 
-
-
-   // Add event listeners
-   function addEvents() {
-            // Add to cart button event listeners
-            let addCartBtns = document.querySelectorAll('.add__cart');
-            addCartBtns.forEach(btn => {
-                btn.addEventListener('click', handleAddCartItem);
-            });
-
-            // Remove item from cart event listeners
-            const cartContent = document.querySelector('.cart__content');
-            cartContent.addEventListener('click', function (event) {
-                if (event.target.classList.contains('item__remove')) {
-                    handleRemoveCartItems.call(event.target);
-                }
-               
-            });
-
-            // Change item quantity event listeners
-            cartContent.addEventListener('input', function (event) {
-                if (event.target.classList.contains('cart__quantity')) {
-                    handleChangeItemQuantity.call(event.target);
-                }
-            });
-
-            // Checkout button event listener
-            const buyBtn = document.querySelector('.checkout__btn');
-            buyBtn.addEventListener('click', handleBuyOrder);
-        }
+//handle
+let itemsAdded = [];
 
 
-
-
-// function handleAddCartItem() {
-//   let product = this.parentElement;
-//   let title = product.querySelector(".pro__name").innerHTML;
-//   let price = product.querySelector(".pro__price").innerHTML;
-//   let imgSrc = product.querySelector(".pro__img").src;
-
-//   let newToAdd = {
-//     title,
-//     price,
-//     imgSrc,
-//   };
-
-
-// //if item already in cart
-//   if(itemsAdded.find((el) => el.title == newToAdd.title)) {
-//     alert('Item is already in your cart');
-//     return;
-//   }else {
-//     itemsAdded.push(newToAdd);
-//   }
-
-// //add to cart items
-//   let cartBoxElement = cartBoxComponent(title, price, imgSrc);
-//   let newNode = document.createElement('div');
-//   newNode.innerHTML = cartBoxElement;
-//   const cartContent = cart.querySelector('.cart__content');
-//   cartContent.appendChild(newNode);
-
-  
-//   update();
-//   // saveCartItems();
-  
-  
-// }
-
-
-// function handleRemoveCartItems(){
-//   this.parentElement.remove();
-//   itemsAdded = itemsAdded.filter(el => el.title != this.parentElement.querySelector('.cart__title-name').innerHTML
-//   );
-
-//   update();
-//   // saveCartItems();
-// }
-
-// function handleChangeItemQuantity() {
-//   const quantityInput = this;
-//   if (isNaN(quantityInput.value) || quantityInput.value < 1) {
-//     quantityInput.value = 1;
-//   } else if (quantityInput.value % 1 !== 0) {
-//     // Ensure the quantity is a whole number
-//     quantityInput.value = Math.floor(quantityInput.value);
-//   }
-
-//   // Find the cart box that contains the changed quantity input
-//   const cartBox = quantityInput.closest('.cart__box');
-//   if (!cartBox) return; // If cart box not found, exit
-
-//   const title = cartBox.querySelector('.cart__title-name').textContent;
-
-//   // Update the cart total
-//   updateTotal();
-
-//   // Find and update the item in localStorage
-//   const cartItems = JSON.parse(localStorage.getItem('cartItems'));
-//   const updatedCartItems = cartItems.map((item) => {
-//     if (item.title === title) {
-//       item.quantity = quantityInput.value;
-//     }
-//     return item;
-//   });
-
-//   // Save the updated items back to localStorage
-//   localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-// }
-
-
-
-// function handleBuyOrder(){
-//   if(itemsAdded.length <= 0){
-//     alert('Please add items before checking out. Thank You');
-//     return;
-//   }
-// }
-
-
-
-
-
-function updateTotal() {
-            let cartBoxes = document.querySelectorAll('.cart__box');
-            const totalElement = document.querySelector('.total__price');
-            let total = 0;
-
-            cartBoxes.forEach((cartBox) => {
-                let priceElement = cartBox.querySelector('.cart__item-price');
-                let quantity = cartBox.querySelector('.cart__quantity').value;
-                let price = parseFloat(priceElement.innerHTML.replace('$', ''));
-
-                total += price * quantity;
-            });
-
-            total = total.toFixed(2);
-            totalElement.innerHTML = '$' + total;
-        }
-
-        function handleAddCartItem() {
+function handleAddCartItem() {
   let product = this.parentElement;
   let title = product.querySelector(".pro__name").innerHTML;
   let price = product.querySelector(".pro__price").innerHTML;
   let imgSrc = product.querySelector(".pro__img").src;
-  let quantity = 1; // Default quantity for a new item
 
-  // Check if the item is already in the cart
-  const existingItem = itemsAdded.find((item) => item.title === title);
-  if (existingItem) {
-    // Increase the quantity if the item is already in the cart
-    existingItem.quantity += 1;
-    quantity = existingItem.quantity;
-  } else {
-    // Add the new item to itemsAdded
-    itemsAdded.push({ title, price, imgSrc, quantity });
+  let newToAdd = {
+    title,
+    price,
+    imgSrc,
+  };
+
+
+//if item already in cart
+  if(itemsAdded.find((el) => el.title == newToAdd.title)) {
+    alert('Item is already in your cart');
+    return;
+  }else {
+    itemsAdded.push(newToAdd);
   }
 
-  // Add to cart items
-  let cartBoxElement = cartBoxComponent(title, price, imgSrc, quantity);
-  let newNode = document.createElement("div");
+//add to cart items
+  let cartBoxElement = cartBoxComponent(title, price, imgSrc);
+  let newNode = document.createElement('div');
   newNode.innerHTML = cartBoxElement;
-  const cartContent = cart.querySelector(".cart__content");
+  const cartContent = cart.querySelector('.cart__content');
   cartContent.appendChild(newNode);
 
+  
   update();
+  // saveCartItems();
+  
+  
 }
 
-function handleRemoveCartItems() {
+
+function handleRemoveCartItems(){
   this.parentElement.remove();
-  const title = this.parentElement.querySelector(".cart__title-name").textContent;
-
-  // Remove the item from itemsAdded
-  itemsAdded = itemsAdded.filter((item) => item.title !== title);
+  itemsAdded = itemsAdded.filter(el => el.title != this.parentElement.querySelector('.cart__title-name').innerHTML
+  );
 
   update();
+  // saveCartItems();
 }
 
-
-        function handleChangeItemQuantity() {
+function handleChangeItemQuantity() {
   const quantityInput = this;
   if (isNaN(quantityInput.value) || quantityInput.value < 1) {
     quantityInput.value = 1;
@@ -597,27 +452,27 @@ function handleRemoveCartItems() {
   // Update the cart total
   updateTotal();
 
-  // Find and update the item in the itemsAdded array
-  const itemToUpdate = itemsAdded.find((item) => item.title === title);
-  if (itemToUpdate) {
-    itemToUpdate.quantity = quantityInput.value;
-  }
+  // Find and update the item in localStorage
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  const updatedCartItems = cartItems.map((item) => {
+    if (item.title === title) {
+      item.quantity = quantityInput.value;
+    }
+    return item;
+  });
 
-  // Save the updated itemsAdded array to localStorage
-  saveCartItems();
+  // Save the updated items back to localStorage
+  localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
 }
 
 
-        // Function to handle the checkout process
-        function handleBuyOrder() {
-            if (itemsAdded.length <= 0) {
-                alert('Please add items to your cart before checking out.');
-            } else {
-                // Handle the checkout process
-                // You can add your own logic for the checkout here
-            }
-        }
 
+function handleBuyOrder(){
+  if(itemsAdded.length <= 0){
+    alert('Please add items before checking out. Thank You');
+    return;
+  }
+}
 
 //update function
 
@@ -642,18 +497,22 @@ localStorage.setItem('cartTotal', total);
 }
 
 //html show on cart
-function cartBoxComponent(title, price, imgSrc, quantity) {
-  return `
-    <div class="cart__box">
-      <img src=${imgSrc} alt="" class="cart__img">
-      <div class="details__box">
-        <div class="cart__title-name">${title}</div>
-        <div class="cart__item-price">${price}</div>
-        <input type="number" value="${quantity}" class="cart__quantity">
-      </div>
-      <i class="fa-solid fa-trash-can item__remove"></i>
-    </div>`;
+function cartBoxComponent(title, price, imgSrc) {
+  return  `
+  <div class="cart__box">
+    <img src=${imgSrc} alt="" class="cart__img">
+    <div class="details__box">
+      <div class="cart__title-name">${title}</div>
+      <div class="cart__item-price">${price}</div>
+      <input type="number" value="1" class="cart__quantity">
+    </div>
+
+    <i class="fa-solid fa-trash-can item__remove"></i>
+  </div>`
 }
+
+
+;
 
 addEvents();
 ;
@@ -682,99 +541,37 @@ addEvents();
     });
 
     // Save cartItems to local storage
-    localStorage.setItem('cartItems', JSON.stringify(itemsAdded));
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }
- // Function to load cart items from local storage
- function loadCartItems() {
-        const storedItems = localStorage.getItem('cartItems');
-        if (storedItems) {
-            itemsAdded = JSON.parse(storedItems);
 
-            // Create cart box elements for each item
-            const cartContent = document.querySelector('.cart__content');
-            cartContent.innerHTML = '';
+// Load cart items from local storage
+function loadCartItems() {
+  let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  let cartContent = document.querySelector('.cart__content');
 
-            itemsAdded.forEach(item => {
-                const cartBoxElement = cartBoxComponent(item.title, item.price, item.imgSrc, item.quantity);
-                const newNode = document.createElement('div');
-                newNode.innerHTML = cartBoxElement;
-                cartContent.appendChild(newNode);
-            });
+  if (cartItems) {
+    cartContent.innerHTML = ''; // Clear the cart content
 
-            updateTotal();
+    cartItems.forEach(item => {
+      const cartBoxHTML = cartBoxComponent(item.title, item.price, item.productImg);
+      cartContent.innerHTML += cartBoxHTML;
+
+      // Update the quantity input for this item
+      const cartBoxes = cartContent.querySelectorAll('.cart__box');
+      cartBoxes.forEach(cartBox => {
+        const titleElement = cartBox.querySelector('.cart__title-name');
+        const quantityInput = cartBox.querySelector('.cart__quantity');
+
+        if (titleElement.innerText === item.title) {
+          quantityInput.value = item.quantity;
         }
-    }
-
-
-
-        // Load and update cart items when the page loads
-        window.addEventListener('load', function () {
-            loadCartItems();
-            addEvents();
-            updateTotal();
-        });
-
-
-
-        
-//Search Toggle //
-const searchBtn = document.querySelector('.fa-magnifying-glass');
-const searchCt = document.querySelector('.search__container');
-const searchBtnClose = document.querySelector('.search__icon-close');
-
-
- if (searchBtn){
-  searchBtn.addEventListener('click', () => {
-    searchCt.classList.add('active')
-  })  
-}
-if(searchBtnClose) {    
-searchBtnClose.addEventListener('click', () => {
-  searchCt.classList.remove('active');
-})
-}
-;
-
-
-
-// Function to search for products
-function searchProducts() {
-  const searchInput = document.getElementById('search__item').value.toLowerCase();
-  
-  // Filter products that match the search input
-  const matchingProducts = products.filter(product => {
-    return (
-      product.name.toLowerCase().includes(searchInput) ||
-      product.id.toString().includes(searchInput)
-    );
-  });
-  
-  displayMatchingProducts(matchingProducts);
-}
-
-// Function to display matching products
-function displayMatchingProducts(matchingProducts) {
-  const resultsContainer = document.getElementById('search-results');
-  resultsContainer.innerHTML = '';
-
-  if (matchingProducts.length === 0) {
-    resultsContainer.innerHTML = 'No matching products found.';
-  } else {
-    matchingProducts.forEach(product => {
-      const resultItem = document.createElement('div');
-      resultItem.textContent = `Product ID: ${product.id}, Name: ${product.name}`;
-      resultsContainer.appendChild(resultItem);
+      });
     });
+
+    // Update the total based on loaded items
+    updateTotal();
   }
 }
-
-// Add event listener to search input
-const searchInput = document.getElementById('search__item');
-searchInput.addEventListener('input', searchProducts);
-
-// You can also call searchProducts when the page loads to display all products
-searchProducts();
-
 
 
   </script>
