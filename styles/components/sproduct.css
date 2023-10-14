@@ -1,0 +1,76 @@
+
+.small__img-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+.small__img-col{
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+.big__img{
+margin-bottom: 1rem;
+width: 95%;
+}
+
+.product__main-page{
+  display: flex;
+  margin-top: 4rem;
+}
+
+.product__right-side{
+  flex: .6;
+}
+
+.product__middle{
+  flex: 1;
+}
+
+.product__left-side{
+  flex: .18;
+
+}
+  
+.spro1{
+margin-top: 5rem;
+width: 95%;
+}
+
+.spro__img{
+  display: none;
+}
+
+.spro__brand,
+.spro__name,
+.spro__price{
+  margin-bottom: .25rem;
+}
+
+.spro__name{
+  font-size: var(--size-xl);
+  font-weight: 500;
+}
+
+.spro__price{
+  font-weight: 400;
+  color: rgb(50, 50, 50, .65);
+}
+
+.spro__cart{
+  left: 10px;
+  bottom: -50px;
+}
+
+.spro__cart span{
+  color: darkblue;
+}
+
+.spro__details{
+width: 90%;
+}
+
+.small__img-group{
+  display: flex;
+  flex-direction: column;
+}

@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="styles/components/checkout.css">
   <link rel="stylesheet" href="styles/components/contact.css">
   <link rel="stylesheet" href="styles/components/footer.css">
+  <link rel="stylesheet" href="styles/components/sproduct.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
   
-  <title>Checkout</title>
+  <title>Nike Dunk Low</title>
 </head>
 <body>
- 
   <header class="header container">
     <nav id="nav">
       <ul class="header__menu-logo">
@@ -28,8 +28,8 @@
         </li>
       </ul>
       <ul id="navbar" class="header__menu">
-        <li class="header__link"><a class="active" href="#">Home</a></li>
-        <li class="header__link"><a href="#">Sneaks</a></li>
+        <li class="header__link"><a href="index.html">Home</a></li>
+        <li class="header__link"><a class="active" href="#">Shop</a></li>
         <li class="header__link"><a href="#">Deals</a></li>
         <li class="header__link"><a href="#">About</a></li>
       </ul>
@@ -42,7 +42,7 @@
           <div class="header__cart" href="" id="cartIcon"> <i class="fa-solid fa-bag-shopping fa-lg"></i><span class="cart__icon-quantity">0</span></div>
         </li>
         <div id="mobile">
-          <!-- <div class="header__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg mobile__cart-fa"></i> Cart <span class="header__cart-span">0</span></div> -->
+          
           <div class="hamburger__menu-btn">
             <button class="hamburger__btn" aria-controls="primary-navigation" aria-expanded="false">
               <svg class="hamburger" viewBox="0 0 100 100" width="250">
@@ -72,13 +72,23 @@
             <i class="fa-solid fa-xmark search__icon-close"></i>
           </form>
         </div>
-      
+      <!-- <div class=".cart__box"> -->
+
+      </div>
 
       <div id="cart__menu">
         <h2 class="cart__title">Your Cart</h2>
         <i class="fa-solid fa-arrow-right-long close__cart"></i>
         <div class="cart__content">
-
+          <!-- <div class="cart__box">
+            <img src="images/Nike-sneaks/nike101/nike101.webp" alt="" class="cart__img">
+            <div class="details__box">
+              <div class="cart__title-name">nike dunk low</div>
+              <div class="cart__item-price">$10.07</div>
+              <input type="number" value="1" class="cart__quantity">
+            </div>
+            <i class="fa-solid fa-trash-can item__remove"></i>
+          </div> -->
           
         </div>
         <div class="total">
@@ -95,24 +105,53 @@
     </nav>
     
   </header>
+  <section id="product" class="product section container">
+    <!-- <div class="product__container" id="product__list">
+      <div data-id="1" class="pro1">
+        <img src="images/nike-sneaks/nike101/nike101.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike101/nike102.webp'" onmouseout="src='images/nike-sneaks/nike101/nike101.webp'">
+        <span class="brand">Nike</span>
+        <p class="pro__name">Nike Dunk Low</p>
+        <p class="pro__price">$109.95</p>
+        <i class="fa-solid fa-cart-shopping add__cart"></i>
+      </div> -->
 
-  <section class="checkout section container">
-
-    <div class="checkout__container">
-      <div class="checkout__header">
-        <h5 class="products__title">Product</h5>
-        <h5 class="products__price">Price</h5>
-        <h5 class="products__quantity">Quantity</h5>
-        <h5 class="products__total">Total</h5>
-      </div>
-      <div class="products">
-
+    
+  <div class="product__main-page">
+    <div class="product__left-side">
+      <div class="small__img-group">
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike101/nike101.webp" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike101/nike102.webp" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike101/nike103.webp" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike101/nike104.webp" alt="" class="small__img">
+        </div>
       </div>
     </div>
+    <div class="product__middle">
+      <img src="images/Nike-sneaks/nike101/nike101.webp" alt="" class="big__img" id="mainImg">
+    </div>
+    <div class="product__right-side">
+      
+        <div data-id="1" class="pro1 spro1">
+          <img src="images/nike-sneaks/nike101/nike101.webp" class="pro__img spro__img" alt="">
+          <span class="brand spro__brand">Nike</span>
+          <p class="pro__name spro__name">Nike Dunk Low</p>
+          <p class="pro__price spro__price">$109.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart spro__cart"> <span>Add To Cart</span></i>
+          <p class="spro__details">Created for the hardwood but taken to the streets, the '80s b-ball icon returns with perfectly shined overlays and classic team colors. With its iconic hoops design, the Nike Dunk Low channels '80s vintage back onto the streets while its padded, low-cut collar lets you take your game anywhere in comfort.</p>
+      </div>
 
-  </section>
-
-  <section class="contact section container">
+    
+  </div>  
+</section>
+ 
+ <section class="contact section container">
     <div class="contact__left-side">
       <h2>SUBSCRIBE AND SAVE</h2>
       <P>Get <span>10% off</span> for signing up for our newsletter</P>
@@ -130,9 +169,6 @@
     <div class="footer__copyright copyright">Sneaks4Geeks <span>&copy;</span> 2023 Raimer Thompson </div>
   </footer>
   
-
-
-
 </body>
 <script src="main.js"></script>
 </html>

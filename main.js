@@ -5,6 +5,7 @@ let totalQuantity = 0;
 
 const menuBtn = document.querySelector('.hamburger__btn');
 const mobileNav = document.getElementById('navbar');
+const mobileCartIcon = document.querySelector('.header__cart')
 let menuOpen = false;
 
 menuBtn.addEventListener('click', () => {
@@ -13,12 +14,14 @@ menuBtn.addEventListener('click', () => {
     menuOpen = true;
     mobileNav.style.display = 'flex';
     mobileNav.classList.add('active');
+    mobileCartIcon.style.display = 'none'
     
    }else {
     menuBtn.classList.remove('close');
     menuOpen = false;
     mobileNav.style.display = 'flex';
     mobileNav.classList.remove('active');
+    mobileCartIcon.style.display = "inline"
    }
 })
 ;
@@ -249,9 +252,9 @@ function updateCartIconQuantity() {
   cartQuantity.textContent = totalQuantity;
 
   if (totalQuantity > 0) {
-    cartQuantity.style.display = 'inline'; // Show the quantity badge
+    cartQuantity.style.display = 'inline'; 
   } else {
-    cartQuantity.style.display = 'none'; // Hide the quantity badge
+    cartQuantity.style.display = 'none'; 
   }
 }
 
@@ -315,6 +318,27 @@ window.addEventListener('load', function () {
     updateCartIconQuantity();
 });
 
+
+const bigImg = document.getElementById('mainImg');
+const smlImg = document.getElementsByClassName('small__img');
+
+smlImg[0].onclick = function(){
+  bigImg.src = smlImg[0].src;
+  
+}
+
+smlImg[1].onclick = function(){
+  bigImg.src = smlImg[1].src;
+}
+
+smlImg[2].onclick = function(){
+  bigImg.src = smlImg[2].src;
+}
+
+smlImg[3].onclick = function(){
+  bigImg.src = smlImg[3].src;
+}
+;
 
 //Search functionality//
 const search = () =>{
@@ -384,7 +408,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+  // slides[slideIndex-1].style.display = "block";
 }
 ;
 

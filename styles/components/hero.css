@@ -141,7 +141,6 @@ opacity: .7;
   left: 16px;
   font-size: var(--size-sm);
   line-height: 1px;
-  border: 3px dotted green;
 }
 
 .pro__price{
@@ -162,7 +161,7 @@ opacity: .7;
 .pro1 img{
   width: 90%;
   border-radius: 4px;
-  border: 2px dotted yellow;
+  cursor: pointer;
 }
 
 .add__cart{
