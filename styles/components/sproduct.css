@@ -2,11 +2,14 @@
 .small__img-group{
   display: flex;
   justify-content: space-between;
+  /* border: 3px solid purple; */
+  gap: .25rem;
 }
 
 .small__img-col{
   flex-basis: 24%;
   cursor: pointer;
+
 }
 
 .big__img{
@@ -60,6 +63,7 @@ width: 95%;
 .spro__cart{
   left: 10px;
   bottom: -50px;
+  display: flex;
 }
 
 .spro__cart span{

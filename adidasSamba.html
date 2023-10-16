@@ -111,7 +111,7 @@
           <img src="images/Adi-sneaks/adi201/adi203.webp" alt="" class="small__img">
         </div>
         <div class="small__img-col">
-          <img src="images/Adi-sneaks/adi201/adi204.webp" alt="" class="small__img">
+          <img src="images/Adi-sneaks/adi201/adi204.webp" alt="" class="small__img" onclick="addBorder(this)" id="smlimg">
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@
           <span class="brand spro__brand">Adidas</span>
           <p class="pro__name spro__name">Adidas Beige Samba</p>
           <p class="pro__price spro__price">$99.95</p>
-          <i class="fa-solid fa-cart-shopping add__cart spro__cart"> <span>Add To Cart</span></i>
+          <i class="fa-solid fa-cart-shopping add__cart spro__cart"> <span></span>Buy Now</i>
           <p class="spro__details">Born on the pitch, the Samba is a timeless icon of street style. This silhouette stays true to its legacy with a tasteful, low-profile, soft leather upper, suede overlays and gum sole, making it a staple in everyone's closet - on and off the pitch.
 
           </p>
@@ -154,5 +154,17 @@
   </footer>
   
 </body>
+<script>
+
+function addBorder(e) {
+  const x = document.getElementsByClassName("small__img");
+  for(i = 0; i < x.length; i++)
+  {
+	  x.item(i).style.border = 'none';
+  }
+  id.style.border = '5px solid orange';
+  console.log(x);
+}
+</script>
 <script src="main.js"></script>
 </html>
