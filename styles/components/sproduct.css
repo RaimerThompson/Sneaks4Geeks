@@ -12,6 +12,10 @@
 
 }
 
+.small__img:focus-visible{
+  outline: 2px solid green;
+}
+
 .big__img{
 margin-bottom: 1rem;
 width: 95%;
@@ -63,7 +67,6 @@ width: 95%;
 .spro__cart{
   left: 10px;
   bottom: -50px;
-  display: flex;
 }
 
 .spro__cart span{
