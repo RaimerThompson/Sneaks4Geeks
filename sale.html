@@ -13,13 +13,54 @@
   <link rel="stylesheet" href="styles/components/checkout.css">
   <link rel="stylesheet" href="styles/components/contact.css">
   <link rel="stylesheet" href="styles/components/footer.css">
-  <link rel="stylesheet" href="styles/components/sproduct.css">
+  <link rel="stylesheet" href="styles/components/about.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
   
-  <title>Adidas Beige Samba</title>
+  <title>Sneaks 4 Geeks</title>
+
+  <style>
+  .sale{
+  margin-top: 3.5rem;
+}
+
+.sale__banner{
+  position: relative;
+  background-image: url(/images/Sneaks\ in\ a\ rack.webp);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  min-width: 580px;
+  height: 65vh;
+  margin: 0 auto;
+}
+
+.sale__banner:hover{
+  filter: grayscale(0%);
+}
+
+.sale__text{
+  position: relative;
+  color: rgb(255, 135, 55);
+  text-align: center;
+  transform: translateY(-270%);
+  left: -180px;
+  height: 50%;
+  font-weight: 700;
+  font-size: var(--size-8xl);   
+}
+
+
+.sale__products-container{
+  margin-top: -6rem;
+  margin-bottom: 5rem;
+}
+
+  </style>
+
 </head>
 <body>
+
   <header class="header container">
     <nav id="nav">
       <ul class="header__menu-logo">
@@ -29,9 +70,9 @@
       </ul>
       <ul id="navbar" class="header__menu">
         <li class="header__link"><a href="index.html">Home</a></li>
-        <li class="header__link"><a class="active" href="#">Shop</a></li>
+        <li class="header__link"><a href="#">Shop</a></li>
         <li class="header__link"><a href="about.html">About</a></li>
-        <li class="header__link"><a href="sale.html">Sale</a></li>
+        <li class="header__link"><a class="active" href="#">Sale</a></li>
       </ul>
       <ul class="header__menu-right">
         <li class="header__link-right">
@@ -80,6 +121,16 @@
         <h2 class="cart__title">Your Cart</h2>
         <i class="fa-solid fa-arrow-right-long close__cart"></i>
         <div class="cart__content">
+          <!-- <div class="cart__box">
+            <img src="images/Nike-sneaks/nike101/nike101.webp" alt="" class="cart__img">
+            <div class="details__box">
+              <div class="cart__title-name">nike dunk low</div>
+              <div class="cart__item-price">$10.07</div>
+              <input type="number" value="1" class="cart__quantity">
+            </div>
+            <i class="fa-solid fa-trash-can item__remove"></i>
+          </div> -->
+          
         </div>
         <div class="total">
           <div class="total__title">Total</div>
@@ -95,47 +146,21 @@
     </nav>
     
   </header>
-  <section id="product" class="product section container">
-
-    
-  <div class="product__main-page">
-    <div class="product__left-side">
-      <div class="small__img-group">
-        <div class="small__img-col">
-          <img src="images/Adi-sneaks/adi201/adi201.webp" alt="" class="small__img">
-        </div>
-        <div class="small__img-col">
-          <img src="images/Adi-sneaks/adi201/adi202.webp" alt="" class="small__img">
-        </div>
-        <div class="small__img-col">
-          <img src="images/Adi-sneaks/adi201/adi203.webp" alt="" class="small__img">
-        </div>
-        <div class="small__img-col">
-          <img src="images/Adi-sneaks/adi201/adi204.webp" alt="" class="small__img" onclick="addBorder(this)" id="smlimg">
-        </div>
-      </div>
-    </div>
-    <div class="product__middle">
-      <img src="images/Adi-sneaks/adi201/adi201.webp" alt="" class="big__img" id="mainImg">
-    </div>
-    <div class="product__right-side">
-      
-        <div data-id="2" class="pro1 spro1">
-          <img src="images/Adi-sneaks/adi201/adi201.webp" class="pro__img spro__img" alt="">
-          <span class="brand spro__brand">Adidas</span>
-          <p class="pro__name spro__name">Adidas Beige Samba</p>
-          <p class="pro__price spro__price">$99.95</p>
-          <i class="fa-solid fa-cart-shopping add__cart spro__cart"> <span></span>Buy Now</i>
-          <p class="spro__details">Born on the pitch, the Samba is a timeless icon of street style. This silhouette stays true to its legacy with a tasteful, low-profile, soft leather upper, suede overlays and gum sole, making it a staple in everyone's closet - on and off the pitch.
-
-          </p>
-      </div>
-
-    
-  </div>  
-</section>
  
- <section class="contact section container">
+
+   <section class="sale section container">
+    <div class="sale__banner"></div>
+    <h1 class="sale__text">SALE</h1>
+    <div class="sale__products-container"> 
+   
+    
+    </div>
+    
+    
+    
+   </section>
+
+  <section class="contact section container">
     <div class="contact__left-side">
       <h2>SUBSCRIBE AND SAVE</h2>
       <P>Get <span>10% off</span> for signing up for our newsletter</P>
@@ -154,17 +179,5 @@
   </footer>
   
 </body>
-<script>
-
-function addBorder(e) {
-  const x = document.getElementsByClassName("small__img-col");
-  for(i = 0; i < x.length; i++)
-  {
-	  x.item(i).style.border = 'none';
-  }
-  id.style.border = '5px solid orange';
-  console.log(x);
-}
-</script>
 <script src="main.js"></script>
 </html>
