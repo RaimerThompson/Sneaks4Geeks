@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Lato:wght@100;400;700;900&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Nothing+You+Could+Do&family=Outfit:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/components/header.css">
+  <link rel="stylesheet" href="styles/components/hero.css">
+  <link rel="stylesheet" href="styles/components/banner.css">
+  <link rel="stylesheet" href="styles/components/checkout.css">
+  <link rel="stylesheet" href="styles/components/contact.css">
+  <link rel="stylesheet" href="styles/components/footer.css">
+  <link rel="stylesheet" href="styles/components/sproduct.css">
+  <link rel="stylesheet" href="styles/components/about.css">
+  <link rel="stylesheet" href="styles/components/sale.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
+  
+  <title>Nike Air Force 1</title>
+</head>
+<body>
+  <header class="header container">
+    <nav id="nav">
+      <ul class="header__menu-logo">
+        <li>
+          <a class="header__logo" href="">Sneaks<span class="logo__number4">4</span>Geeks</a>
+        </li>
+      </ul>
+      <ul id="navbar" class="header__menu">
+        <li class="header__link"><a href="index.html">Home</a></li>
+        <li class="header__link"><a  href="#">Shop</a></li>
+        <li class="header__link"><a href="about.html">About</a></li>
+        <li class="header__link"><a class="active"href="sale.html">Sale</a></li>
+      </ul>
+      <ul class="header__menu-right">
+        <li class="header__link-right">
+          <!-- <i class="fa-regular fa-user"></i> -->
+
+          <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
+         
+          <div class="header__cart" href="" id="cartIcon"> <i class="fa-solid fa-bag-shopping fa-lg"></i><span class="cart__icon-quantity">0</span></div>
+        </li>
+        <div id="mobile">
+          
+          <div class="hamburger__menu-btn">
+            <button class="hamburger__btn" aria-controls="primary-navigation" aria-expanded="false">
+              <svg class="hamburger" viewBox="0 0 100 100" width="250">
+                <rect class="top line" 
+                width="80" height="10" 
+                x="10" y="15" rx="3.5">
+              </rect>
+                <rect class="middle line"
+                 width="80" height="10" 
+                 x="10" y="45" rx="3.5">
+                </rect>
+                <rect class="bottom line" 
+                width="80" height="10" 
+                x="10" y="75" rx="3.5">
+              </rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </ul>
+
+      
+        <div class="search__container">
+          <form>
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+            <input type="text" id="search__item" class="search__input" placeholder="Search our shop" onkeyup="search()">
+            <i class="fa-solid fa-xmark search__icon-close"></i>
+          </form>
+        </div>
+      <!-- <div class=".cart__box"> -->
+
+      </div>
+
+      <div id="cart__menu">
+        <h2 class="cart__title">Your Cart</h2>
+        <i class="fa-solid fa-arrow-right-long close__cart"></i>
+        <div class="cart__content">
+        </div>
+        <div class="total">
+          <div class="total__title">Total</div>
+          <div class="total__price">$0</div>
+        </div>
+        <div class="checkout__btn-div">
+           <button class="checkout__btn btn">CHECK OUT</button>
+        </div>
+       
+      
+      </div>
+      
+    </nav>
+    
+  </header>
+  <section id="product" class="product section container">
+
+    
+  <div class="product__main-page">
+    <div class="product__left-side">
+      <div class="small__img-group">
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike901/901.jpg" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike901/902.jpg" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike901/903.jpg" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/Nike-sneaks/nike901/904.jpg" alt="" class="small__img">
+        </div>
+      </div>
+    </div>
+    <div class="product__middle">
+      <img src="images/Nike-sneaks/nike901/901.jpg" alt="" class="big__img" id="mainImg">
+    </div>
+    <div class="product__right-side">
+      
+        <div data-id="9" class="pro1 spro1">
+          <img src="images/Nike-sneaks/nike901/901.jpg" class="pro__img spro__img" alt="">
+          <span class="brand spro__brand">Nike</span>
+          <p class="pro__name spro__name">Nike Air Force 1</p>
+          <p class="pro__price spro__price">$59.95</p>
+          <p class="sale__price">$109.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart spro__cart"> <span></span>Buy Now</i>
+          <p class="spro__details">Let the radiance live on in the Nike Air Force 1 '07. Putting a fresh spin on B-ball silhouettes, these OG shoes perfect the things you know best. </p>
+      </div>
+
+    
+  </div>  
+</section>
+ 
+ <section class="contact section container">
+    <div class="contact__left-side">
+      <h2>SUBSCRIBE AND SAVE</h2>
+      <P>Get <span>10% off</span> for signing up for our newsletter</P>
+    </div>
+    <div class="contact__right-side">
+      <input type="email" value="" placeholder="Enter Email"><button class="btn submit__btn">SUBMIT</button>
+    </div>
+  </section> 
+
+ 
+  <footer class="footer section container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="footer__copyright copyright">Sneaks4Geeks <span>&copy;</span> 2023 Raimer Thompson </div>
+  </footer>
+  
+</body>
+<script src="main.js"></script>
+</html>

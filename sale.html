@@ -14,49 +14,11 @@
   <link rel="stylesheet" href="styles/components/contact.css">
   <link rel="stylesheet" href="styles/components/footer.css">
   <link rel="stylesheet" href="styles/components/about.css">
+  <link rel="stylesheet" href="styles/components/sale.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
   
-  <title>Sneaks 4 Geeks</title>
-
-  <style>
-  .sale{
-  margin-top: 3.5rem;
-}
-
-.sale__banner{
-  position: relative;
-  background-image: url(/images/Sneaks\ in\ a\ rack.webp);
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(100%);
-  min-width: 580px;
-  height: 65vh;
-  margin: 0 auto;
-}
-
-.sale__banner:hover{
-  filter: grayscale(0%);
-}
-
-.sale__text{
-  position: relative;
-  color: rgb(255, 135, 55);
-  text-align: center;
-  transform: translateY(-270%);
-  left: -180px;
-  height: 50%;
-  font-weight: 700;
-  font-size: var(--size-8xl);   
-}
-
-
-.sale__products-container{
-  margin-top: -6rem;
-  margin-bottom: 5rem;
-}
-
-  </style>
+  <title>SALES</title>
 
 </head>
 <body>
@@ -151,10 +113,85 @@
    <section class="sale section container">
     <div class="sale__banner"></div>
     <h1 class="sale__text">SALE</h1>
-    <div class="sale__products-container"> 
-   
+
+    <section id="sale__product" >
+      <div class="sale__product-container" id="product__list">
+        <div data-id="11" class="pro1">
+          <img src="images/nike-sneaks/nike901/901.jpg" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike901/902.jpg'" onmouseout="src='images/nike-sneaks/nike901/901.jpg'" onclick="window.location.href='nikeAirForce1.html';">
+          <span class="brand">Nike</span>
+          <p class="pro__name">Nike Air Force 1</p>
+          <p class="pro__price pro__price-sale">$59.95</p>
+          <p class="sale__price">$109.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="12" class="pro1">
+          <img src="images/Nike-sneaks/nike501/501.jpg" class="pro__img" alt="" onmouseover="src='images/Nike-sneaks/nike501/502.jpg'" onmouseout="src='images/Nike-sneaks/nike501/501.jpg'" onclick="window.location.href='adidasSamba.html';">
+          <span class="brand">Nike</span>
+          <p class="pro__name">Nike Air Max 95</p>
+          <p class="pro__price pro__price-sale">$79.99</p>
+          <p class="sale__price">$109.99</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="13" class="pro1">
+          <img src="images/NB-sneaks/nb201/nb201.webp" class="pro__img" alt="" onmouseover="src='images/NB-sneaks/nb201/nb202.webp'" onmouseout="src='images/NB-sneaks/nb201/nb201.webp'" onclick="window.location.href='nikeDunkLow1.html';">
+          <span class="brand">New Balance</span>
+          <p class="pro__name">New Balance 990</p>
+          <p class="pro__price pro__price-sale">$109.95</p>
+          <p class="sale__price">$199.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="14" class="pro1">
+          <img src="images/Adi-sneaks/adi401/401.jpg" class="pro__img" alt="" onmouseover="src='images/Adi-sneaks/adi401/402.jpg'" onmouseout="src='images/Adi-sneaks/adi401/401.jpg'" onclick="window.location.href='adidasSamba.html';">
+          <span class="brand">Adidas</span>
+          <p class="pro__name">Adidas Bad Bunny</p>
+          <p class="pro__price pro__price-sale">$69.95</p>
+          <p class="sale__price">$99.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="15" class="pro1">
+          <img src="images/Adi-sneaks/adi601/601.jpg" class="pro__img" alt="" onmouseover="src='images/Adi-sneaks/adi601/602.jpg'" onmouseout="src='images/Adi-sneaks/adi601/601.jpg'" onclick="window.location.href='adidasSamba.html';">
+          <span class="brand">Adidas</span>
+          <p class="pro__name">Adidas Ultraboost 1.0</p>
+          <p class="pro__price pro__price-sale">$99.99</p>
+          <p class="sale__price">$149.99</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="16" class="pro1">
+          <img src="images/NB-sneaks/nb301/301.jpg" class="pro__img" alt="" onmouseover="src='images/NB-sneaks/nb301/302.jpg'" onmouseout="src='images/NB-sneaks/nb301/301.jpg'" onclick="window.location.href='nikeDunkLow1.html';">
+          <span class="brand">New Balance</span>
+          <p class="pro__name">New Balance 550</p>
+          <p class="pro__price pro__price-sale">$59.95</p>
+          <p class="sale__price">$139.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="17" class="pro1">
+          <img src="images/Nike-sneaks/nike1001/1001.jpg" class="pro__img" alt="" onmouseover="src='images/Nike-sneaks/nike1001/1002.jpg'" onmouseout="src='images/Nike-sneaks/nike1001/1001.jpg'" onclick="window.location.href='nikeDunkLow1.html';">
+          <span class="brand">Nike</span>
+          <p class="pro__name">Nike Dunk Sequoia</p>
+          <p class="pro__price pro__price-sale">$60.00</p>
+          <p class="sale__price">$120.00</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+
+        <div data-id="18" class="pro1">
+          <img src="images/Adi-sneaks/adi101/adi101.webp" class="pro__img" alt="" onmouseover="src='images/Adi-sneaks/adi101/adi102.webp'" onmouseout="src='images/Adi-sneaks/adi101/adi101.webp'" onclick="window.location.href='adidasSamba.html';">
+          <span class="brand">Adidas</span>
+          <p class="pro__name">Adidas Samba Black</p>
+          <p class="pro__price pro__price-sale">$79.95</p>
+          <p class="sale__price">$119.99</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
+      </div>
+    </section>
+        
     
-    </div>
+    
     
     
     
