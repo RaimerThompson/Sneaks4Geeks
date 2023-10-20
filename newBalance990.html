@@ -13,25 +13,27 @@
   <link rel="stylesheet" href="styles/components/checkout.css">
   <link rel="stylesheet" href="styles/components/contact.css">
   <link rel="stylesheet" href="styles/components/footer.css">
+  <link rel="stylesheet" href="styles/components/sproduct.css">
+  <link rel="stylesheet" href="styles/components/about.css">
+  <link rel="stylesheet" href="styles/components/sale.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
   
-  <title>Checkout</title>
+  <title>New Balance 990</title>
 </head>
 <body>
- 
   <header class="header container">
     <nav id="nav">
       <ul class="header__menu-logo">
         <li>
-          <a class="header__logo" href="">Sneaks<span class="logo__number4">4</span>Geeks</a>
+          <a class="header__logo" href="index.html">Sneaks<span class="logo__number4">4</span>Geeks</a>
         </li>
       </ul>
       <ul id="navbar" class="header__menu">
-        <li class="header__link"><a class="active" href="#">Home</a></li>
-        <li class="header__link"><a href="#">Sneaks</a></li>
-        <li class="header__link"><a href="#">Deals</a></li>
-        <li class="header__link"><a href="#">About</a></li>
+        <li class="header__link"><a href="index.html">Home</a></li>
+        <li class="header__link"><a  href="#">Shop</a></li>
+        <li class="header__link"><a href="about.html">About</a></li>
+        <li class="header__link"><a class="active"href="sale.html">Sale</a></li>
       </ul>
       <ul class="header__menu-right">
         <li class="header__link-right">
@@ -42,7 +44,7 @@
           <div class="header__cart" href="" id="cartIcon"> <i class="fa-solid fa-bag-shopping fa-lg"></i><span class="cart__icon-quantity">0</span></div>
         </li>
         <div id="mobile">
-          <!-- <div class="header__cart" href=""> <i class="fa-solid fa-bag-shopping fa-lg mobile__cart-fa"></i> Cart <span class="header__cart-span">0</span></div> -->
+          
           <div class="hamburger__menu-btn">
             <button class="hamburger__btn" aria-controls="primary-navigation" aria-expanded="false">
               <svg class="hamburger" viewBox="0 0 100 100" width="250">
@@ -72,14 +74,14 @@
             <i class="fa-solid fa-xmark search__icon-close"></i>
           </form>
         </div>
-      
+      <!-- <div class=".cart__box"> -->
+
+      </div>
 
       <div id="cart__menu">
         <h2 class="cart__title">Your Cart</h2>
         <i class="fa-solid fa-arrow-right-long close__cart"></i>
         <div class="cart__content">
-
-          
         </div>
         <div class="total">
           <div class="total__title">Total</div>
@@ -95,24 +97,46 @@
     </nav>
     
   </header>
+  <section id="product" class="product section container">
 
-  <section class="checkout section container">
-
-    <div class="checkout__container">
-      <div class="checkout__header">
-        <h5 class="products__title">Product</h5>
-        <h5 class="products__price">Price</h5>
-        <h5 class="products__quantity">Quantity</h5>
-        <h5 class="products__total">Total</h5>
-      </div>
-      <div class="products">
-
+    
+  <div class="product__main-page">
+    <div class="product__left-side">
+      <div class="small__img-group">
+        <div class="small__img-col">
+          <img src="images/NB-sneaks/nb201/nb201.webp" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/NB-sneaks/nb201/nb202.webp" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/NB-sneaks/nb201/nb203.webp" alt="" class="small__img">
+        </div>
+        <div class="small__img-col">
+          <img src="images/NB-sneaks/nb201/nb204.webp" alt="" class="small__img">
+        </div>
       </div>
     </div>
+    <div class="product__middle">
+      <img src="images/NB-sneaks/nb201/nb201.webp" alt="" class="big__img" id="mainImg">
+    </div>
+    <div class="product__right-side">
+      
+        <div data-id="9" class="pro1 spro1">
+          <img src="images/NB-sneaks/nb201/nb201.webp" class="pro__img spro__img" alt="">
+          <span class="brand spro__brand">Nike</span>
+          <p class="pro__name spro__name">New Balance 990</p>
+          <p class="pro__price spro__price">$109.95</p>
+          <p class="sale__price">$199.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart spro__cart"> <span></span>Buy Now</i>
+          <p class="spro__details">The 990’s original designers were tasked with creating the single best running shoe on the market. When it hit shelves for the first time in 1982 the 990 sported an elegantly understated grey colorway, and a then unheard of three-figure price tag.</p>
+      </div>
 
-  </section>
-
-  <section class="contact section container">
+    
+  </div>  
+</section>
+ 
+ <section class="contact section container">
     <div class="contact__left-side">
       <h2>SUBSCRIBE AND SAVE</h2>
       <P>Get <span>10% off</span> for signing up for our newsletter</P>
@@ -130,9 +154,6 @@
     <div class="footer__copyright copyright">Sneaks4Geeks <span>&copy;</span> 2023 Raimer Thompson </div>
   </footer>
   
-
-
-
 </body>
 <script src="main.js"></script>
 </html>

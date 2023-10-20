@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@400;500;600;700&family=Lato:wght@100;400;700;900&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Nothing+You+Could+Do&family=Outfit:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/components/header.css">
+  <link rel="stylesheet" href="styles/components/hero.css">
+  <link rel="stylesheet" href="styles/components/banner.css">
+  <link rel="stylesheet" href="styles/components/checkout.css">
+  <link rel="stylesheet" href="styles/components/contact.css">
+  <link rel="stylesheet" href="styles/components/footer.css">
+  <link rel="stylesheet" href="styles/components/about.css">
+  <link rel="stylesheet" href="styles/components/sale.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+  <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
+  
+  <title>New Releases</title>
+<style>
+
+.exRelease{
+    margin-top: 3.5rem;
+  }
+
+.exRelease__banner{
+  position: relative;
+  background-image: url(/images/shoes\ store\ layout.webp);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  min-width: 580px;
+  height: 25vh;
+  margin: 0 auto;
+}
+
+.exRelease__banner:hover{
+  filter: grayscale(30%);
+}
+
+.exRelease__text{
+  position: relative;
+  color: rgb(255, 135, 55);
+  text-align: center;
+  transform: translateY(-130%);
+  left: 0px;
+  height: 50%;
+  font-weight: 700;
+  font-size: 5.1rem;   
+}
+
+.exproduct__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -4.5rem;
+  }
+ 
+
+
+
+
+</style>
+</head>
+<body>
+
+  <header class="header container">
+    <nav id="nav">
+      <ul class="header__menu-logo">
+        <li>
+          <a class="header__logo" href="index.html">Sneaks<span class="logo__number4">4</span>Geeks</a>
+        </li>
+      </ul>
+      <ul id="navbar" class="header__menu">
+        <li class="header__link"><a href="index.html">Home</a></li>
+        <li class="header__link"><a class="active"href="#">Shop</a></li>
+        <li class="header__link"><a href="about.html">About</a></li>
+        <li class="header__link"><a  href="#">Sale</a></li>
+      </ul>
+      <ul class="header__menu-right">
+        <li class="header__link-right">
+          <!-- <i class="fa-regular fa-user"></i> -->
+
+          <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
+         
+          <div class="header__cart" href="" id="cartIcon"> <i class="fa-solid fa-bag-shopping fa-lg"></i><span class="cart__icon-quantity">0</span></div>
+        </li>
+        <div id="mobile">
+          
+          <div class="hamburger__menu-btn">
+            <button class="hamburger__btn" aria-controls="primary-navigation" aria-expanded="false">
+              <svg class="hamburger" viewBox="0 0 100 100" width="250">
+                <rect class="top line" 
+                width="80" height="10" 
+                x="10" y="15" rx="3.5">
+              </rect>
+                <rect class="middle line"
+                 width="80" height="10" 
+                 x="10" y="45" rx="3.5">
+                </rect>
+                <rect class="bottom line" 
+                width="80" height="10" 
+                x="10" y="75" rx="3.5">
+              </rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </ul>
+
+      
+        <div class="search__container">
+          <form>
+            <i class="fa-solid fa-magnifying-glass search__icon"></i>
+            <input type="text" id="search__item" class="search__input" placeholder="Search our shop" onkeyup="search()">
+            <i class="fa-solid fa-xmark search__icon-close"></i>
+          </form>
+        </div>
+      <!-- <div class=".cart__box"> -->
+
+      </div>
+
+      <div id="cart__menu">
+        <h2 class="cart__title">Your Cart</h2>
+        <i class="fa-solid fa-arrow-right-long close__cart"></i>
+        <div class="cart__content">
+
+          
+        </div>
+        <div class="total">
+          <div class="total__title">Total</div>
+          <div class="total__price">$0</div>
+        </div>
+        <div class="checkout__btn-div">
+           <button class="checkout__btn btn">CHECK OUT</button>
+        </div>
+       
+      
+      </div>
+      
+    </nav>
+    
+  </header>
+ 
+
+   <section class="exRelease section container">
+    <div class="exRelease__banner"></div>
+    <h1 class="exRelease__text">Exclusive Release</h1>
+    <div class="exproduct__container" id="product__list">
+      <div data-id="6" class="pro1">
+        <img src="images/nike-sneaks/nike401/nike401.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike401/nike402.webp'" onmouseout="src='images/nike-sneaks/nike401/nike401.webp'" onclick="window.location.href='nikeAirmax97.html';">
+        <span class="brand">Nike</span>
+        <p class="pro__name">Nike Air Max 97 OG</p>
+        <p class="pro__price">$185.00</p>
+        <i class="fa-solid fa-cart-shopping add__cart"></i>
+      </div>
+    
+    <div data-id="7" class="pro1">
+      <img src="images/nike-sneaks/nike601/601.jpg" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike601/602.jpg'" onmouseout="src='images/nike-sneaks/nike601/601.jpg'" onclick="window.location.href='nikeAirmax2.html';">
+      <span class="brand">Nike</span>
+      <p class="pro__name">Nike Air Max 1</p>
+      <p class="pro__price">$160.00</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+
+    <div data-id="8" class="pro1"  >
+      <img src="images/nike-sneaks/nike1101/1101.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike1101/1104.webp'" onmouseout="src='images/nike-sneaks/nike1101/1101.webp'" onclick="window.location.href='nikePhantom.html';">
+      <span class="brand">Nike</span>
+      <p class="pro__name">Nike ACG Watercat Phantom</p>
+      <p class="pro__price">$125.00</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+
+    <div data-id="9" class="pro1">
+      <img src="images/nike-sneaks/nike701/701.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike701/702.jpg'" onmouseout="src='images/nike-sneaks/nike701/701.webp'" onclick="window.location.href='nikeAirmax3.html';">
+      <span class="brand">Nike</span>
+      <p class="pro__name">Nike Air Max 1</p>
+      <p class="pro__price">$159.95</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+
+    <div data-id="10" class="pro1">
+      <img src="images/nike-sneaks/nike801/801.jpg" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike801/802.jpg'" onmouseout="src='images/nike-sneaks/nike801/801.jpg'" onclick="window.location.href='nikeBlazer77.html';">
+      <span class="brand">Nike</span>
+      <p class="pro__name">Nike Blazer Mid '77</p>
+      <p class="pro__price">$109.95</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+    
+    <div data-id="25" class="pro1">
+      <img src="images/Adi-sneaks/adi301/adi301.webp" class="pro__img" alt="" onmouseover="src='images/Adi-sneaks/adi301/adi302.webp'" onmouseout="src='images/Adi-sneaks/adi301/adi301.webp'" onclick="window.location.href='newBalance580v2.html';">
+      <span class="brand">Adidas</span>
+      <p class="pro__name">Adidas Jeremy Scott Wings</p>
+      <p class="pro__price">$220.00</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+
+    <div data-id="26" class="pro1">
+      <img src="images/Adi-sneaks/adi701/701.webp" class="pro__img" alt="" onmouseover="src='images/Adi-sneaks/adi701/702.webp'" onmouseout="src='images/Adi-sneaks/adi701/701.webp'" onclick="window.location.href='newBalance580v2.html';">
+      <span class="brand">Adidas</span>
+      <p class="pro__name">Adidas NMD_S1</p>
+      <p class="pro__price">$199.95</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+
+    <div data-id="27" class="pro1">
+      <img src="images/Nike-sneaks/nike1201/1201.webp" class="pro__img" alt="" onmouseover="src='images/Nike-sneaks/nike1201/1202.webp'" onmouseout="src='images/Nike-sneaks/nike1201/1201.webp'" onclick="window.location.href='nikeAirmax1.html';">
+      <span class="brand">Nike</span>
+      <p class="pro__name">Nike Air Force 1 '50</p>
+      <p class="pro__price">$139.95</p>
+      <i class="fa-solid fa-cart-shopping add__cart"></i>
+    </div>
+  </div>
+
+    </section>
+        
+    
+    
+    
+    
+    
+   </section>
+
+  <section class="contact section container">
+    <div class="contact__left-side">
+      <h2>SUBSCRIBE AND SAVE</h2>
+      <P>Get <span>10% off</span> for signing up for our newsletter</P>
+    </div>
+    <div class="contact__right-side">
+      <input type="email" value="" placeholder="Enter Email"><button class="btn submit__btn">SUBMIT</button>
+    </div>
+  </section> 
+
+ 
+  <footer class="footer section container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="footer__copyright copyright">Sneaks4Geeks <span>&copy;</span> 2023 Raimer Thompson </div>
+  </footer>
+  
+</body>
+<script src="main.js"></script>
+</html>
