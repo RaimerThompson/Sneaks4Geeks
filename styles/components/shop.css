@@ -1,10 +1,11 @@
-.sale{
+
+.shop{
   margin-top: 3.5rem;
 }
 
-.sale__banner{
+.shop__banner{
   position: relative;
-  background-image: url(/images/Sneaks\ in\ a\ rack.webp);
+  background-image: url(/images/shop\ store.webp);
   background-size: cover;
   background-position: center;
   filter: grayscale(100%);
@@ -13,28 +14,27 @@
   margin: 0 auto;
 }
 
-.sale__banner:hover{
+.shop__banner:hover{
   filter: grayscale(30%);
 }
 
-.sale__text{
+.shop__text{
   position: relative;
   color: rgb(255, 135, 55);
   text-align: center;
   transform: translateY(-150%);
-  left: -50px;
   height: 50%;
   font-weight: 700;
   font-size: var(--size-8xl);   
 }
 
 
-#sale__products{
+#shop__products{
   margin-bottom: 5rem;
   margin-top: 2rem;
 }
 
-.sale__product-container{
+.shop__product-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   flex-direction: row;
@@ -42,10 +42,10 @@
   gap: 1rem;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: -5.5rem;
+  margin-top: -7rem;
 }
 
-.sale__price{
+.shop__price{
   color: rgb(50, 50, 50,.85);
   font-weight: 300;
   text-decoration: line-through;
@@ -58,29 +58,20 @@
 
 
 /* xs */
-@media (min-width: 475px) {
-  .sale__text{
-    left: -120px;  
-  }
-}
+/* @media (min-width: 475px) {} */
 
 /* sm */
-@media (min-width: 640px) {
-  .sale__text{
-    left: -190px;
-    font-size: var(--size-8xl);   
-  }
-}
+/* @media (min-width: 640px) {} */
 
 /* md */
 @media (min-width: 768px) {
-  .sale{
+  .shop{
     margin-top: 3.5rem;
   }
   
-  .sale__banner{
+  .shop__banner{
     position: relative;
-    background-image: url(/images/Sneaks\ in\ a\ rack.webp);
+    background-image: url(/images/shop\ store.webp);
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
@@ -89,28 +80,27 @@
     margin: 0 auto;
   }
   
-  .sale__banner:hover{
+  .shop__banner:hover{
     filter: grayscale(30%);
   }
   
-  .sale__text{
+  .shop__text{
     position: relative;
     color: rgb(255, 135, 55);
     text-align: center;
     transform: translateY(-200%);
-    left: -250px;
     height: 50%;
     font-weight: 700;
     font-size: var(--size-8xl);   
   }
   
   
-  #sale__products{
+  #shop__products{
     margin-bottom: 5rem;
     margin-top: 2rem;
   }
   
-  .sale__product-container{
+  .shop__product-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     flex-direction: row;
@@ -121,7 +111,7 @@
     margin-top: -7rem;
   }
   
-  .sale__price{
+  .shop__price{
     color: rgb(50, 50, 50,.85);
     font-weight: 300;
     text-decoration: line-through;
@@ -135,20 +125,10 @@
 }
 
 /* Lg */
-@media (min-width: 1024px) {
-  .sale__text{
-    left: -300px;
-    font-size: var(--size-8xl); 
-  }
-}
+/* @media (min-width: 1024px) {} */
 
 /* xL */
-@media (min-width: 1288px) {
-  .sale__text{
-    left:400px;
-  }
-}
+/* @media (min-width: 1288px) {} */
 
 /* 2xL */
 /* @media (min-width: 1536px) {}   */
-
