@@ -15,8 +15,12 @@
   <link rel="stylesheet" href="styles/components/footer.css">
   <link rel="stylesheet" href="styles/utilities.css">
   <script src="https://kit.fontawesome.com/c339e0fb63.js" crossorigin="anonymous"></script>
+
+
   
   <title>Sneaks 4 Geeks</title>
+
+ 
 </head>
 <body>
   <!-- Header Begins-->
@@ -108,7 +112,7 @@
 <!-- Header Ends-->
   <main>
 <!-- Hero Begins-->   
-  <section class="hero section container">
+  <!-- <section class="hero section container">
 
     <div class="hero__scroll-container main-scroll-div">
          
@@ -136,8 +140,36 @@
       <i class="fa-solid fa-chevron-right"></i>
     </div> 
    </div>
-    </section>
+    </section> -->
 <!-- Hero Ends-->
+  <section class="hero  section container">
+   
+    <div class="image__container">
+      <div class="image">
+        <img src="images/NewBalance banner.webp" alt="">
+      </div>
+      <div class="image">
+        <img src="images/Clarks-Hero-Banner.webp" alt="">
+      </div>
+      <div class="image">
+        <img src="images/Asics add image.webp" alt="">
+      </div>
+       <div class="arrow__buttons">
+      <a class="fa-solid fa-chevron-left prev"  onclick="nextImg(-1)"></a>
+      <a class="fa-solid fa-chevron-right next" onclick="nextImg(1)"></a>
+    </div>
+
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    </div>
+   
+   
+  </section>
+ 
+
 
 
     <div class="hero__new-release-container">
@@ -164,13 +196,13 @@
           <i class="fa-solid fa-cart-shopping add__cart"></i>
         </div>
       
-      <div data-id="3" class="pro1">
-        <img src="images/nike-sneaks/nike301/nike301.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike301/nike302.webp'" onmouseout="src='images/nike-sneaks/nike301/nike301.webp'" onclick="window.location.href='nikeAirmax1.html';">
-        <span class="brand">Nike</span>
-        <p class="pro__name">Nike Air Max 1</p>
-        <p class="pro__price">$140.00</p>
-        <i class="fa-solid fa-cart-shopping add__cart"></i>
-      </div>
+        <div data-id="5" class="pro1">
+          <img src="images/nike-sneaks/nike201/nike201.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike201/nike202.webp'" onmouseout="src='images/nike-sneaks/nike201/nike201.webp'" onclick="window.location.href='nikeBlazerLow.html';">
+          <span class="brand">Nike</span>
+          <p class="pro__name">Nike Blazer Low</p>
+          <p class="pro__price">$89.95</p>
+          <i class="fa-solid fa-cart-shopping add__cart"></i>
+        </div>
 
       <div data-id="4" class="pro1">
         <img src="images/nb-sneaks/nb101/nb101.webp" class="pro__img" alt="" onmouseover="src='images/nb-sneaks/nb101/nb102.webp'" onmouseout="src='images/nb-sneaks/nb101/nb101.webp'" onclick="window.location.href='newBalance580v2.html';">
@@ -180,13 +212,7 @@
         <i class="fa-solid fa-cart-shopping add__cart"></i>
       </div>
 
-      <div data-id="5" class="pro1">
-        <img src="images/nike-sneaks/nike201/nike201.webp" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike201/nike202.webp'" onmouseout="src='images/nike-sneaks/nike201/nike201.webp'" onclick="window.location.href='nikeBlazerLow.html';">
-        <span class="brand">Nike</span>
-        <p class="pro__name">Nike Blazer Low</p>
-        <p class="pro__price">$89.95</p>
-        <i class="fa-solid fa-cart-shopping add__cart"></i>
-      </div>
+      
       
     </div>
     </section>
@@ -232,15 +258,6 @@
         <p class="pro__price">$159.95</p>
         <i class="fa-solid fa-cart-shopping add__cart"></i>
       </div>
-
-      <div data-id="10" class="pro1">
-        <img src="images/nike-sneaks/nike801/801.jpg" class="pro__img" alt="" onmouseover="src='images/nike-sneaks/nike801/802.jpg'" onmouseout="src='images/nike-sneaks/nike801/801.jpg'" onclick="window.location.href='nikeBlazer77.html';">
-        <span class="brand">Nike</span>
-        <p class="pro__name">Nike Blazer Mid '77</p>
-        <p class="pro__price">$109.95</p>
-        <i class="fa-solid fa-cart-shopping add__cart"></i>
-      </div>
-      
       
     </div>
     </section>
@@ -279,7 +296,9 @@
     <div></div>
     <div class="footer__copyright copyright">Sneaks4Geeks <span>&copy;</span> 2023 Raimer Thompson </div>
   </footer>
-  
-</body>
+
 <script src="main.js"></script>
+</body>
+
+
 </html>

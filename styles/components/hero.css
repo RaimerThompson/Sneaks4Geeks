@@ -1,6 +1,5 @@
 .hero{
-  padding: .5rem;
-  margin-left:  1rem;
+  margin-top: 4rem;
 }
 
 .main-scroll-div{
@@ -48,7 +47,7 @@
   object-fit: contain;
 }
 
-.fa-chevron-left,
+/* .fa-chevron-left,
 .fa-chevron-right{
   cursor: pointer;
   position: relative;
@@ -66,7 +65,69 @@ opacity: .7;
 .fa-chevron-left:active,
 .fa-chevron-right:active{
   opacity: 1;
+} */
+
+.image__container{
+  width: 80%;
+  height: 80vh;
+  margin: auto;
 }
+
+.image__container .image img{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.image__container .image{
+  display: block;
+}
+
+.dots{
+  text-align: center;
+  position: absolute;
+  bottom: 5rem;
+  left: 45%;
+  background-color: black;
+  padding: 5px 10px;
+  height: 30px
+}
+
+.dot{
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 0 2px;
+  display: inline-block;
+  background: aliceblue;
+}
+
+
+
+.image__container .arrow__buttons{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.image__container .arrow__buttons a{
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+  vertical-align: middle;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
 
 .hero__nav-button {
   display: flex;
