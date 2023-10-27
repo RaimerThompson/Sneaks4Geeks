@@ -319,26 +319,26 @@ window.addEventListener('load', function () {
 });
 
 
-// const bigImg = document.getElementById('mainImg');
-// const smlImg = document.getElementsByClassName('small__img');
+const bigImg = document.getElementById('mainImg');
+const smlImg = document.getElementsByClassName('small__img');
 
-// smlImg[0].onclick = function(){
-//   bigImg.src = smlImg[0].src;
+smlImg[0].onclick = function(){
+  bigImg.src = smlImg[0].src;
   
-// }
+}
 
-// smlImg[1].onclick = function(){
-//   bigImg.src = smlImg[1].src;
-// }
+smlImg[1].onclick = function(){
+  bigImg.src = smlImg[1].src;
+}
 
-// smlImg[2].onclick = function(){
-//   bigImg.src = smlImg[2].src;
-// }
+smlImg[2].onclick = function(){
+  bigImg.src = smlImg[2].src;
+}
 
-// smlImg[3].onclick = function(){
-//   bigImg.src = smlImg[3].src;
-// }
-// ;
+smlImg[3].onclick = function(){
+  bigImg.src = smlImg[3].src;
+}
+;
 
 //Search functionality//
 const search = () =>{
@@ -383,34 +383,6 @@ searchBtnClose.addEventListener('click', () => {
 
 
 
-// let slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   // slides[slideIndex-1].style.display = "block";
-// }
-// ;;
 
 //image slider
 const slides = document.querySelector(".slider").children;
