@@ -2,8 +2,8 @@
   margin-top: 4rem;
   overflow: hidden;
   position: relative;
-  height: 80vh;
-  width: 100vw;
+  height: 75vh;
+
 }
 
 .main-scroll-div{
@@ -51,25 +51,6 @@
   object-fit: contain;
 }
 
-/* .fa-chevron-left,
-.fa-chevron-right{
-  cursor: pointer;
-  position: relative;
-  width: 0%;
-  z-index: 2;
-  opacity: .4;
-  color: black;
-}
-
-.fa-chevron-left:hover,
-.fa-chevron-right:hover{
-opacity: .7;
-}
-
-.fa-chevron-left:active,
-.fa-chevron-right:active{
-  opacity: 1;
-} */
 .slide{
   position: absolute;
   left: 0;
@@ -89,22 +70,35 @@ opacity: .7;
 .prev,
 .next{
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   z-index: 2;
   height: 2.5rem;
   width: 2.5rem;
   color: rgb(100, 100, 100);
-  line-height: 2.5rem;
+  line-height: 1.5rem;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
+.prev:hover,
+.next:hover{
+  opacity: .8;
+}
+
+.prev:active,
+.next:active{
+  opacity: .8;
+  color: black;
+}
 .prev{
-left: 17rem;
+left: 45%
 }
 
 .next{
-right: 17rem;
+right: 42%;
 }
 
 .hero__nav-button {
@@ -120,7 +114,7 @@ right: 17rem;
 .hero__new-release-container{
   position: relative;
   margin-left: 2rem;
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .hero__exclusive-container{
@@ -160,24 +154,26 @@ right: 17rem;
   left: 1rem;
   text-decoration: none;
   border: none;
+  opacity: .85;
+}
+
+.shop__btn:hover{
+  opacity: 1;
 }
 
 .shop__btn1{
-  background-color: rgb(255, 245, 231);
+  background-color: rgb(255, 245, 232);
   color: rgb(50, 50, 50, .75);
-  border: .5px solid rgb(200, 200, 200);
 }
 
 .shop__btn2{
-  /* background-color: antiquewhite;
-  color: black;
-  border: .5px solid rgb(200, 200, 200); */
+  background-color: rgb(10, 10, 10);
+  color: white;
 }
 
 .shop__btn3{
-  /* background-color: antiquewhite;
-  color: black;
-  border: .5px solid rgb(200, 200, 200); */
+  background-color: rgb(255, 120, 50);
+  color: white;
 }
 
 #product {

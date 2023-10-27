@@ -420,10 +420,12 @@ let index = 0;
 
 prev.addEventListener("click", function(){
   prevSlide();
+  resetTimer();
 })
 
 next.addEventListener("click", function(){
   nextSlide();
+  resetTimer();
 })
 
 function prevSlide(){
@@ -452,3 +454,19 @@ function changeSlide(){
     }
   slides[index].classList.add("active");
 }
+
+function resetTimer(){
+  clearInterval(timer);
+  timer = setInterval(autoPlay, 4000);
+}
+
+function autoPlay(){
+  nextSlide();
+}
+
+let timer = setInterval(autoPlay, 4000);
+;
+
+
+//products image slider
+const productContainers = [...document.querySelector(".product__container")]

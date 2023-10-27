@@ -12,11 +12,9 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   background-color: white;
+  overflow-x: hidden;
 }
 
-main {
-  margin: 1rem
-}
 
 img,
 picture,
