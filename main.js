@@ -468,5 +468,3 @@ let timer = setInterval(autoPlay, 4000);
 ;
 
 
-//products image slider
-const productContainers = [...document.querySelector(".product__container")]
