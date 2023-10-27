@@ -319,26 +319,26 @@ window.addEventListener('load', function () {
 });
 
 
-const bigImg = document.getElementById('mainImg');
-const smlImg = document.getElementsByClassName('small__img');
+// const bigImg = document.getElementById('mainImg');
+// const smlImg = document.getElementsByClassName('small__img');
 
-smlImg[0].onclick = function(){
-  bigImg.src = smlImg[0].src;
+// smlImg[0].onclick = function(){
+//   bigImg.src = smlImg[0].src;
   
-}
+// }
 
-smlImg[1].onclick = function(){
-  bigImg.src = smlImg[1].src;
-}
+// smlImg[1].onclick = function(){
+//   bigImg.src = smlImg[1].src;
+// }
 
-smlImg[2].onclick = function(){
-  bigImg.src = smlImg[2].src;
-}
+// smlImg[2].onclick = function(){
+//   bigImg.src = smlImg[2].src;
+// }
 
-smlImg[3].onclick = function(){
-  bigImg.src = smlImg[3].src;
-}
-;
+// smlImg[3].onclick = function(){
+//   bigImg.src = smlImg[3].src;
+// }
+// ;
 
 //Search functionality//
 const search = () =>{
@@ -413,37 +413,42 @@ searchBtnClose.addEventListener('click', () => {
 // ;;
 
 //image slider
-var imageno = 1;
-displayImg(imageno);
+const slides = document.querySelector(".slider").children;
+const prev = document.querySelector(".prev");
+const next= document.querySelector(".next");
+let index = 0;
 
-function nextImg(n){
-  displayImg(imageno += n)
+prev.addEventListener("click", function(){
+  prevSlide();
+})
+
+next.addEventListener("click", function(){
+  nextSlide();
+})
+
+function prevSlide(){
+  if(index==0){
+    index=slides.length-1;
+  }
+  else{
+    index--;
+  }
+  changeSlide()
 }
 
-function currentSlide(n){
-  displayImg(imageno = n)
+function nextSlide(){
+  if(index == slides.length -1){
+    index = 0;
+  }
+  else {
+    index++
+  }
+  changeSlide();
 }
 
-function displayImg(n){
-  var i ;
-  var image = document.getElementsByClassName('image');
-  var dots = document.getElementsByClassName('dot')
-
-  if (n > image.length){
-    imageno = 1;
-  }
-  if (n < 1){
-    imageno = image.length;
-  }
-
-  for (i = 0; i < image.length; i++){
-    image[i].style.display = 'none';
-  }
-  for (i = 0; i < dots.length; i++){
-    dots[i].className = dots[i].className.replace(' active', '');
-  }
-
-  image[imageno - 1].style.display = "block";
-  dots[imageno - 1].className += ' active';
+function changeSlide(){
+    for (let i = 0; i < slides.length; i++){
+      slides[i].classList.remove("active");
+    }
+  slides[index].classList.add("active");
 }
-

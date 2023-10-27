@@ -1,5 +1,9 @@
 .hero{
   margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+  width: 100vw;
 }
 
 .main-scroll-div{
@@ -66,68 +70,42 @@ opacity: .7;
 .fa-chevron-right:active{
   opacity: 1;
 } */
-
-.image__container{
-  width: 80%;
-  height: 80vh;
-  margin: auto;
-}
-
-.image__container .image img{
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.image__container .image{
-  display: block;
-}
-
-.dots{
-  text-align: center;
+.slide{
   position: absolute;
-  bottom: 5rem;
-  left: 45%;
-  background-color: black;
-  padding: 5px 10px;
-  height: 30px
-}
-
-.dot{
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  margin: 0 2px;
-  display: inline-block;
-  background: aliceblue;
-}
-
-
-
-.image__container .arrow__buttons{
-  position: absolute;
-  top: 50%;
   left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  margin-top: .6rem;
+}
+
+.slide.active{
   display: flex;
-  justify-content: space-between;
-  z-index: 5;
 }
 
-.image__container .arrow__buttons a{
-  width: 2.5rem;
+.prev,
+.next{
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
   height: 2.5rem;
-  text-align: center;
+  width: 2.5rem;
+  color: rgb(100, 100, 100);
   line-height: 2.5rem;
-  vertical-align: middle;
-  align-items: center;
   cursor: pointer;
-  font-size: 1.1rem;
-  user-select: none;
+  font-size: 1.5rem;
 }
 
+.prev{
+left: 17rem;
+}
+
+.next{
+right: 17rem;
+}
 
 .hero__nav-button {
   display: flex;
@@ -142,6 +120,7 @@ opacity: .7;
 .hero__new-release-container{
   position: relative;
   margin-left: 2rem;
+  margin-top: 5rem;
 }
 
 .hero__exclusive-container{
@@ -170,8 +149,35 @@ opacity: .7;
 .hero__button:hover{
   background: inherit;
   color: black;
-  border: .5px solid rgb(255, 135, 55);
+  border: 1px solid rgb(255, 135, 55);
   transition: .3s;
+
+}
+
+.shop__btn{
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  text-decoration: none;
+  border: none;
+}
+
+.shop__btn1{
+  background-color: rgb(255, 245, 231);
+  color: rgb(50, 50, 50, .75);
+  border: .5px solid rgb(200, 200, 200);
+}
+
+.shop__btn2{
+  /* background-color: antiquewhite;
+  color: black;
+  border: .5px solid rgb(200, 200, 200); */
+}
+
+.shop__btn3{
+  /* background-color: antiquewhite;
+  color: black;
+  border: .5px solid rgb(200, 200, 200); */
 }
 
 #product {
@@ -261,7 +267,6 @@ opacity: .7;
   opacity: 1;
   color: rgb(255, 135, 55);
 }
-
 
 
 /* xs */
