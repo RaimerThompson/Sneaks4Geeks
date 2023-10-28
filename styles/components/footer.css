@@ -16,20 +16,20 @@
 
 
 /* xs */
-/* @media (max-width: 475px) {} */
+/* @media (min-width: 475px) {} */
 
 /* sm */
-/* @media (max-width: 640px) {} */
+/* @media (min-width: 640px) {} */
 
 /* md */
-/* @media (max-width: 768px) {} */
+/* @media (min-width: 768px) {} */
 
 /* Lg */
-/* @media (max-width: 1024px) {} */
+/* @media (min-width: 1024px) {} */
 
 /* xL */
-/* @media (max-width: 1288px) {} */
+/* @media (min-width: 1288px) {} */
 
 /* 2xL */
-/* @media (max-width: 1536px) {}   */
+/* @media (min-width: 1536px) {}   */
 
