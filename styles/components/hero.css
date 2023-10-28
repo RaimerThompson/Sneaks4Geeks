@@ -6,51 +6,6 @@
 
 }
 
-.main-scroll-div{
-  position: relative;
-  max-width: 100%;
-  width: 100%;
-  height: 70vh;
-  min-width: 24rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.scroll-images{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  overflow: auto;
-  position: relative;
-  scroll-behavior: smooth;
-  aspect-ratio: 16 / 9;
-  scroll-snap-type: x mandatory;
-}
-
-.child{
-  max-width: 48rem;
-  height: 100%;
-  margin: 0 auto;
-  cursor: pointer;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-}
-
-.scroll-images::-webkit-scrollbar{
-  display: none;
-}
-
-.child-img{
-  flex: 1 0 100%;
-  object-fit: contain;
-}
-
 .slide{
   position: absolute;
   left: 0;
@@ -70,14 +25,14 @@
 .prev,
 .next{
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.5rem;
   z-index: 2;
   height: 2.5rem;
   width: 2.5rem;
   color: rgb(100, 100, 100);
   line-height: 1.5rem;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -98,7 +53,7 @@ left: 45%
 }
 
 .next{
-right: 42%;
+right: 40%;
 }
 
 .hero__nav-button {
@@ -276,10 +231,44 @@ right: 42%;
 
 
 /* xs */
-/* @media (min-width: 475px) {} */
+@media (min-width: 475px) {
+  
+.prev,
+.next{
+  position: absolute;
+  bottom: 1.5rem;
+  z-index: 2;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: rgb(100, 100, 100);
+  line-height: 1.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+}
 
 /* sm */
-/* @media (min-width: 640px) {} */
+@media (min-width: 640px) {
+  
+.prev,
+.next{
+  position: absolute;
+  bottom: 1.5rem;
+  z-index: 2;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: rgb(100, 100, 100);
+  line-height: 1.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+}
 
 /* md */
 @media (min-width: 768px) {
@@ -355,7 +344,7 @@ right: 42%;
   .prev,
   .next{
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.5rem;
     z-index: 2;
     height: 2.5rem;
     width: 2.5rem;
@@ -562,10 +551,22 @@ right: 42%;
 }
 
 /* Lg */
-/* @media (min-width: 1024px) {} */
+@media (min-width: 1024px) {
+  .prev,
+  .next{
+    bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+}
 
 /* xL */
-/* @media (min-width: 1288px) {} */
+@media (min-width: 1288px) {
+  .prev,
+  .next{
+    bottom: 1rem;
+    font-size: 1.3rem;
+  }
+}
 
 /* 2xL */
 /* @media (min-width: 1536px) {}   */
