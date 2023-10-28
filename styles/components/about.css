@@ -8,7 +8,7 @@
   background-size: cover;
   background-position: center;
   filter: grayscale(100%);
-  min-width: 580px;
+  min-width: 300px;
   height: 55vh;
   margin: 0 auto;
 }
@@ -25,7 +25,7 @@ h4 span{
   position: relative;
   color: rgb(255, 135, 55);
   text-align: center;
-  transform: translateY(-200%);
+  transform: translateY(-150%);
   height: 50%;
   font-weight: 700;
   font-size: var(--size-8xl);
@@ -58,37 +58,94 @@ h4 span{
 
 
 /* xs */
-@media (max-width: 475px) {
+@media (min-width: 475px) {
   .about__text{
-    transform: translateY(-135%);
+    transform: translateY(-225%);
   }
-
-  .about__text-main{
-    margin-top: -12rem;
-  }
-
-.about__description,
-.about__subtitle{
-  text-align: center ;
-}
-
-.about__description{
-  margin-top: 3.5rem;
-}
 }
 
 /* sm */
-/* @media (max-width: 640px) {} */
+/* @media (min-width: 640px) {} */
 
 /* md */
-/* @media (max-width: 768px) {} */
+@media (min-width: 768px) {
+  .about{
+    margin-top: 3.5rem;
+  }
+  
+  .about__banner{
+    position: relative;
+    background-image: url(/images/alot\ of\ sneakers\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    min-width: 580px;
+    height: 55vh;
+    margin: 0 auto;
+  }
+  
+  .about__banner:hover{
+    filter: grayscale(0%);
+  }
+  
+  h4 span{
+    color: rgb(255, 135, 55);
+  }
+  
+  .about__text{
+    position: relative;
+    color: rgb(255, 135, 55);
+    text-align: center;
+    transform: translateY(-270%);
+    height: 50%;
+    font-weight: 700;
+    font-size: var(--size-9xl);
+      
+  }
+  
+  .about__text-main{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(85, 85, 85, .8);
+    font-size: var(--size-xs);
+  }
+  
+  .about__description,
+  .about__subtitle{
+    margin: 3.5rem ;
+    
+  }
+  
+  
+  .about__text-container{
+    margin-top: -6rem;
+    margin-bottom: 5rem;
+  }
+  
+  .about__subtitle{
+    margin-bottom: -2rem;
+  
+  }
+  
+}
 
 /* Lg */
-/* @media (max-width: 1024px) {} */
+@media (min-width: 1024px) {
+  .about__text{
+    position: relative;
+    color: rgb(255, 135, 55);
+    text-align: center;
+    transform: translateY(-185%);
+    height: 50%;
+    font-weight: 700;
+    font-size: var(--size-9xl);
+      
+  }
+}
 
 /* xL */
-/* @media (max-width: 1288px) {} */
+/* @media (min-width: 1288px) {} */
 
 /* 2xL */
-/* @media (max-width: 1536px) {}   */
+/* @media (min-width: 1536px) {}   */
 

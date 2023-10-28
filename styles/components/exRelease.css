@@ -9,8 +9,8 @@ background-image: url(/images/shoes\ store\ layout.webp);
 background-size: cover;
 background-position: center;
 filter: grayscale(100%);
-min-width: 580px;
-height: 25vh;
+min-width: 300px;
+height: 35vh;
 margin: 0 auto;
 }
 
@@ -22,11 +22,11 @@ filter: grayscale(0%);
 position: relative;
 color: rgb(255, 135, 55);
 text-align: center;
-transform: translateY(-130%);
+transform: translateY(-220%);
 left: 0px;
 height: 50%;
 font-weight: 700;
-font-size: var(--size-8xl);   
+font-size: var(--size-7xl);   
 }
 
 .exproduct__container{
@@ -44,20 +44,85 @@ font-size: var(--size-8xl);
 
 
 /* xs */
-/* @media (max-width: 475px) {} */
+@media (min-width: 475px) {
+  .exRelease__text{
+    position: relative;
+    color: rgb(255, 135, 55);
+    text-align: center;
+    transform: translateY(-180%);
+    left: 0px;
+    height: 50%;
+    font-weight: 700;
+    font-size: var(--size-8xl);   
+    }
+}
 
 /* sm */
-/* @media (max-width: 640px) {} */
+/* @media (min-width: 640px) {} */
 
 /* md */
-/* @media (max-width: 768px) {} */
+@media (min-width: 768px) {
+  
+.exRelease{
+  margin-top: 3.5rem;
+}
+
+.exRelease__banner{
+position: relative;
+background-image: url(/images/shoes\ store\ layout.webp);
+background-size: cover;
+background-position: center;
+filter: grayscale(100%);
+min-width: 300px;
+height: 35vh;
+margin: 0 auto;
+}
+
+.exRelease__banner:hover{
+filter: grayscale(0%);
+}
+
+.exRelease__text{
+position: relative;
+color: rgb(255, 135, 55);
+text-align: center;
+transform: translateY(-230%);
+left: 0px;
+height: 50%;
+font-weight: 700;
+font-size: var(--size-8xl);   
+}
+
+.exproduct__container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -4.5rem;
+}
+
+}
 
 /* Lg */
-/* @media (max-width: 1024px) {} */
+@media (min-width: 1024px) {
+  .exRelease__text{
+    position: relative;
+    color: rgb(255, 135, 55);
+    text-align: center;
+    transform: translateY(-160%);
+    left: 0px;
+    height: 50%;
+    font-weight: 700;
+    font-size: var(--size-8xl);   
+    }
+}
 
 /* xL */
-/* @media (max-width: 1288px) {} */
+/* @media (min-width: 1288px) {} */
 
 /* 2xL */
-/* @media (max-width: 1536px) {}   */
+/* @media (min-width: 1536px) {}   */
 

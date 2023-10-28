@@ -8,7 +8,7 @@
   background-size: cover;
   background-position: center;
   filter: grayscale(100%);
-  min-width: 580px;
+  min-width: 300px;
   height: 35vh;
   margin: 0 auto;
 }
@@ -21,7 +21,7 @@
   position: relative;
   color: rgb(255, 135, 55);
   text-align: center;
-  transform: translateY(-150%);
+  transform: translateY(-200%);
   left: -50px;
   height: 50%;
   font-weight: 700;
@@ -97,11 +97,11 @@
     position: relative;
     color: rgb(255, 135, 55);
     text-align: center;
-    transform: translateY(-200%);
-    left: -250px;
+    transform: translateY(-350%);
+    left: -200px;
     height: 50%;
     font-weight: 700;
-    font-size: var(--size-8xl);   
+    font-size: var(--size-9xl);   
   }
   
   
@@ -138,7 +138,8 @@
 @media (min-width: 1024px) {
   .sale__text{
     left: -300px;
-    font-size: var(--size-8xl); 
+    font-size: var(--size-9xl); 
+    transform: translateY(-185%);
   }
 }
 

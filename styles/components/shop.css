@@ -9,7 +9,7 @@
   background-size: cover;
   background-position: center;
   filter: grayscale(100%);
-  min-width: 580px;
+  min-width: 300px;
   height: 35vh;
   margin: 0 auto;
 }
@@ -22,7 +22,7 @@
   position: relative;
   color: rgb(255, 135, 55);
   text-align: center;
-  transform: translateY(-150%);
+  transform: translateY(-200%);
   height: 50%;
   font-weight: 700;
   font-size: var(--size-8xl);   
@@ -88,10 +88,10 @@
     position: relative;
     color: rgb(255, 135, 55);
     text-align: center;
-    transform: translateY(-200%);
+    transform: translateY(-300%);
     height: 50%;
     font-weight: 700;
-    font-size: var(--size-8xl);   
+    font-size: var(--size-9xl);   
   }
   
   
@@ -125,7 +125,18 @@
 }
 
 /* Lg */
-/* @media (min-width: 1024px) {} */
+@media (min-width: 1024px) {
+   
+  .shop__text{
+    position: relative;
+    color: rgb(255, 135, 55);
+    text-align: center;
+    transform: translateY(-200%);
+    height: 100%;
+    font-weight: 700;
+    font-size: var(--size-9xl);   
+  }
+}
 
 /* xL */
 /* @media (min-width: 1288px) {} */
